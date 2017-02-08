@@ -32,6 +32,31 @@
     border-bottom: 5px solid white;
     background-color: black;
 }*/
+
+/*sticky footer */
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -60px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 60px; 
+}
+.site-footer {
+  /*background: orange;*/
+  font-family:copyb;
+}
+/*sticky footer end*/      
 .nav-logo>img{
     margin: 0 0 0 -15%;
 }
@@ -56,14 +81,14 @@
 .home-content>p{
     font-size:180%;
     text-align: justify;
-    padding: 0 0 0 5%;
+    padding: 0 0 0 2%;
 }
 
 
 #slider2-box
 {
     width:125%;
-    margin:-4% 0 0 6.8%;
+    margin:0 0 0 6.8%;
 }
 #slider2
 {
