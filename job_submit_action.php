@@ -2,21 +2,11 @@
 
 date_default_timezone_set("Asia/Kolkata");
 
-//////$link = mysql_connect('localhost', 'xgarbage_shivam', 'ms_2010'); //password shivam database
-//$link = mysql_connect('localhost','root','');//local database
-//{
-//    die('Not connected : ' . mysql_error());
-//}
-//
-//// //make xgarbage_db the current db
-//////$db_selected = mysql_select_db('xgarbage_naukrisamachaar', $link);//server database
-//$db_selected = mysql_select_db('nsm4', $link);//local database
-//if (!$db_selected) {
-//    die ('Can\'t use xgarbage_naukrisamachaar : ' . mysql_error());
-//}
+
 
 // Create connection
-$conn = mysqli_connect("localhost","root", "","nsm4");
+//$conn = mysqli_connect("localhost","root", "","nsm4");//for local server
+$conn=mysqli_connect("localhost","xgarbage_shivam","ms_2010","xgarbage_naukrisamachaar") ;//for server
 
 // Check connection
 if (!$conn) {
