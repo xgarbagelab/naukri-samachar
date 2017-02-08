@@ -1,0 +1,81 @@
+/*nav{
+    height: 165px;
+}
+
+.nav-wrapper{
+    padding-left:1%;
+}
+
+
+.top-nav{
+    
+    padding: 0 0 0 12%;
+    width:120%;
+    align-content: center;
+}
+
+.top-nav>li{
+    width:200px;
+    height: 165px;
+    padding-left: 0;
+    text-align: center;
+}
+
+.top-nav>li>a{
+    color:white;
+    padding-top:50px;
+    
+   
+}
+
+.top-nav>li>a:hover{
+    border-bottom: 5px solid white;
+    background-color: black;
+}*/
+.nav-logo>img{
+    margin: 0 0 0 -15%;
+}
+.nav-bar{
+    height: 100px;
+}
+
+.nav-bar>span{
+   font-size: 150%;
+   line-height: 5;
+}
+
+.nav-bar>span>a{
+    color:white;
+}
+
+.nav-bar>span>a:hover{
+    border-bottom: 5px solid white;
+    
+}
+
+.home-content>p{
+    font-size:180%;
+    text-align: justify;
+    padding: 0 0 0 5%;
+}
+
+
+#slider2-box
+{
+    width:125%;
+    margin:-4% 0 0 6.8%;
+}
+#slider2
+{
+  width:100%;  
+}
+
+.job-post{
+   /*border-radius:25px 25px 25px 25px;*/
+   border-right:4px solid white;
+}
+
+
+
+
+
