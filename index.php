@@ -1,169 +1,180 @@
-<html>
+<!doctype HTML>
+<html lang="en">
     <head>
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NAUKRI SAMACHAR</title>
+        <link rel="stylesheet" href="css/font.css">
         <link rel="stylesheet" href="css/materialize.css">
-         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" >
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" href="images/favicon.png">
     </head>
     <body>
-        
-        <div class="container-fluid">
-            <div class="row card blue white-text">
-                <div class="col l6 offset-l3   center">
-                    <h1>JOB SUBMIT FORM</h1>
+        <div class="page-wrap">  
+            <div class="container-fluid">
+                 <!--Navbar for large device-->
+                <div class="row  center hide-on-small-and-down ">
+                    <div class="col l12 m12 s12 ">
+                        <div class="col l2 m2 s2 nav-logo ">
+                            <img src="images/naukri_samachar_new_3.png" width="140" class=" responsive-img"> 
+                        </div>
+
+                        <div class="col l2 m2 s2 nav-bar blue card">
+                            <span><a href="#">HOME</a></span>
+                        </div>
+                        <div class="col l2 m2 s2 nav-bar orange card">
+                            <span><a href="#">JOB PORTAL</a></span>
+                        </div>
+                        <div class="col l2 m2 s2 nav-bar amber card">
+                            <span><a href="#">COURSE PORTAL</a></span>
+                        </div>
+                        <div class="col l2 m2 s2 nav-bar yellow card">
+                            <span><a href="#">CONTACT US</a></span>
+                        </div>
+                        <div class="col l2 m2 s2 nav-bar red card">
+                            <span><a href="#login">LOGIN</a></span>
+                        </div>
+                    </div>
+                    <hr style="border:5px solid blue"> 
                 </div>
-            </div>
-           <div class="row card">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s4">
-                          <input  id="department_name" class="clear" name="department_name" type="text" class="validate">
-                          <label for="department_name">Department Name</label>
+
+                <!--navbar for small device -->
+                      <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="material-icons hide-on-med-and-up">menu</i></a>
+                      <ul class="side-nav black-text " id="mobile-demo">
+                          <li><img src="images/naukri_samachar_new_3.png" width="140" class="center responsive-img"> </li>
+                        <li class="blue card"><a class="blue" href="sass.html">HOME</a></li>
+                        <li class="orange card" ><a class="orange" href="badges.html">JOB PORTAL</a></li>
+                        <li class="yellow card"><a class="Yellow" href="collapsible.html">COURSE PORTAL</a></li>
+                        <li class="green card"><a class="green" href="mobile.html">CONTACT US</a></li>
+                        <li class="red card"><a  class="red" href="login.php">LOG-IN</a></li>
+                        <!--<li class="amber"><a  class="amber" href="mobile.html">SIGN-IN</a></li>-->
+                      </ul>
+                    <!--</div>-->
+                <!--</nav>-->
+
+                <div class="row home-main" >
+                    <div class="col l12 m12 s12">
+                        <div class="col l9 m9 s9 home-content">
+                                <p>NS (Naukri Samachaar) is a portal for all the government job 
+                                seekers. This portal make the job easy for all the job hunters. 
+                                This portal will update all the hunters with new opening in 
+                                different Government departments with the massive collection of 
+                                contents. We will be collaborating with all the famous coaching 
+                                centers those helps the hunters to chose the best on based on 
+                                their demographical and purpose. So please be keep in touch for 
+                                better performance. We are trying to keep job hunting easy so that 
+                                you just checkout your desire jobs and prepare to get them easily.
+                                
+                                You can check our course tab to get the content which help you
+                                to get the job and help you too prepare for it in a systematic way.
+                                You can also create account to checkout the book-marked job anywhere
+                                anytime.</p>
+
+                                <div class="col l9 m9 s9 ">
+                                    <div class="box box-default" id="slider2-box">
+                                        <div id='slider2'>
+                                            <div class="card red white-text center job-post">
+                                                <h5 class="card-panel blue"><br>South India Banks Jobs</h5>
+                                                <p>201 Vacancies-PO - PAN India</p>
+                                                <p>Age - Not more than 25 years as on 31.12.2016.</p> 
+                                                <p>Candidate should be born on or after 01.01.1992</p>
+                                                <p>and on or before 31.12.1996</p>
+                                                <p><a href="#" class="center">See Details</a></p>
+                                            </div>
+
+                                            <div class="card amber white-text center job-post">
+                                                <h5 class="card-panel blue"><br>South India Banks Jobs</h5>
+                                                <p>201 Vacancies-PO - PAN India</p>
+                                                <p>Age - Not more than 25 years as on 31.12.2016.</p> 
+                                                <p>Candidate should be born on or after 01.01.1992</p>
+                                                <p>and on or before 31.12.1996</p>
+                                                <p><a href="#" class="center">See Details</a></p>
+                                            </div>
+
+                                            <div class="card purple white-text center job-post" >
+                                                <h5 class="card-panel blue"><br>South India Banks Jobs</h5>
+                                                <p>201 Vacancies-PO - PAN India</p>
+                                                <p>Age - Not more than 25 years as on 31.12.2016.</p> 
+                                                <p>Candidate should be born on or after 01.01.1992</p>
+                                                <p>and on or before 31.12.1996</p>
+                                                <p><a href="#" class="center">See Details</a></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+<!--                                <div class="col l12 m12 s12" style="margin: -12% 0 0 2%;">
+                                    <img src="images/dominos.png" width="200" height="300">                        
+                                    <img src="images/dominos.png" width="200" height="300">
+                                    <img src="images/dominos.png" width="200" height="300">
+                                    <img src="images/dominos.png" width="200" height="300">
+                                    <img src="images/dominos.png" width="245" height="300">
+                                </div>-->
                         </div>
-                        <div class="input-field col s4">
-                          <input id="post" class="clear" name="post" type="text" class="validate">
-                          <label for="post">Post</label>
-                        </div>
-                        
-                         <div class="input-field col s4">
-                            <select id="state" class="no-clear">
-                              <option value="" disabled selected>Select State</option>
-                              <option value="Andhra Pradesh">Andhra Pradesh</option>
-                              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                              <option value="Assam">Assam</option>
-                              <option value="Bihar">Bihar</option>
-                              <option value="Chhattisgarh">Chhattisgarh</option>
-                              <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                              <option value="Daman and Diu">Daman and Diu</option>
-                              <option value="Delhi">Delhi</option>
-                              <option value="Goa">Goa</option>
-                              <option value="Gujarat">Gujarat</option>
-                              <option value="Haryana">Haryana</option>
-                              <option value="Himachal Pradesh">Himachal Pradesh</option>
-                              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                              <option value="Jharkhand">Jharkhand</option>
-                              <option value="Karnataka">Karnataka</option>
-                              <option value="Kerala">Kerala</option>
-                              <option value="Madhya Pradesh">Madhya Pradesh/option>
-                              <option value="Maharashtra">Maharashtra</option>
-                              <option value="Manipur">Manipur</option>
-                              <option value="Meghalaya">Meghalaya</option>
-                              <option value="Mizoram">Mizoram</option>
-                              <option value="Nagaland">Nagaland</option>
-                              <option value="Orissa">Orissa</option>
-                              <option value="Puducherry">Puducherry</option>
-                              <option value="Punjab">Punjab</option>
-                              <option value="Rajasthan">Rajasthan</option>
-                              <option value="Sikkim">Sikkim</option>
-                              <option value="Tamil Nadu">Tamil Nadu</option>
-                              <option value="Telangana">Telangana</option>
-                              <option value="Tripura">Tripura</option>
-                              <option value="Uttar Pradesh">Uttar Pradesh</option>
-                              <option value="Uttarakhand">Uttarakhand</option>
-                              <option value="West Bengal">West Bengal</option>
-                            </select>
-            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s4">
-                          <input  id="number_of_vacancies" class="no-clear" name="number_of_vacancies"  type="text" class="validate">
-                          <label for="number_of_vacancies">Number of Vacancies</label>
-                        </div>
-                        
-                        <div class="input-field col s4">
-                          <input id="age_limit" class="clear" name="age_limit" type="text" class="validate">
-                          <label for="age_limit">Age Limit</label>
-                        </div>
-                        
-                        <div class="input-field col s4">
-                          <input id="education_qualification" class="clear" name="education_qualification" type="text" class="validate">
-                          <label for="education_qualification">Education Qualification</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s4">
-                          <input id="pay_scale" class="clear" name="pay_scale" type="text" class="validate">
-                          <label for="pay_scale">Pay Scale</label>
-                        </div>
-                        
-                        <div class="input-field col s4">
-                          <input id="selection_process" class="clear" name="selection_process" type="text" class="validate">
-                          <label for="selection_process">Selection Process</label>
-                        </div>
-                        
-                         <div class="input-field col s4">
-                          <input id="online_link" class="clear" name="online_link" type="text" class="validate">
-                          <label for="online_link">Online Link</label>
+
+
+                        <div class="col l3 m3 s3">
+                            <p><img src="images/dominos.png" width="350" class="responsive-img" ></p>
+                            <p><img src="images/dominos.png" width="350" class="responsive-img"></p>
+                            <p><img src="images/dominos.png" width="350" class="responsive-img"></p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class=" col s4">
-                           <label>Date of Publish</label>
-                          <input for="date_of_publish" id="date_of_publish" class="clear" name="Date_of_Publish" type="date" class="datepicker">
-                        </div>
-                        
-                        <div class=" col s4">
-                          <label for="Last_Date_of_Online_Submission">Last Date of Online Submission</label>
-                          <input id="last_date_of_online_submission" class="clear" name="Last_Date_of_Online_Submission" type="date" class="datepicker">
-                        </div>
-                        
-                        <div class="input-field col s4">
-                          <input id="fees" class="clear" name="Fees"  type="text" class="validate">
-                          <label for="Fees">Fees</label>
-                        </div>
-                    </div>
-                    
-                     <div class="row">
-                        <div class=" col s6">
-                            <label for="Last_Date_of_Fees_Submission">Last Date of Fees Submission</label>
-                          <input id="last_date_of_fees_submission" class="clear" name="Last_Date_of_Fees_Submission" type="date" class="datepicker">
-                        </div>
-                        <div class="input-field col s6">
-                          <input id="others" class="clear" name="Others" type="text" class="validate">
-                          <label for="Others">Others</label>
+                </div>
+
+               <!--LOGIN MODAL-->
+                <div id="login" class="modal">
+                    <div class="modal-content">
+                       <div class="row">
+                            <div class="" >
+                                <div class="col l12 m12 s12">
+                                    <h4 class="black-text center " >LOGIN </h4>
+
+                                    <!--<img src="images/naukri_samachar_new_3.png" class="">-->
+                                </div>
+
+                                <hr style="border:5px solid black">
+                                <div class="input-field col l12 m12 s12">
+                                    <input id="uname"  name="uname" type="text" class="validate">
+                                    <label for="uname"><i class="fa fa-sign-in fa-2x"></i>&nbsp; Enter Your Username </label>
+                                </div>
+
+                                <div class="input-field col l12 m12 s12">
+                                    <input id="password"  name="password" type="password" class="validate">
+                                    <label for="password"><i class="fa fa-key fa-2x"></i>&nbsp;Enter Your Password </label>
+                                </div>
+
+                                <div class="input-field col l12 m12 s12 center">
+                                    <button class="btn waves-effect waves-light" id="submit"><a class="white-text" href="dashboard.php">SUBMIT</a>
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-<!--                        <div class="row">
-                        <div class="col s12">
-                          This is an inline input field:
-                          <div class="input-field inline">
-                            <input id="email" type="email" class="validate">
-                            <label for="email" data-error="wrong" data-success="right">Email</label>
-                          </div>
-                        </div>
+    <!--                <div class="modal-footer">
+                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
                     </div>-->
-                    
-                </form>
-               <div class="row">
-                    <div class="col l2 offset-l4 ">
-                        <button class="btn waves-effect waves-light" id="submit">Save
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                   
-                   <div class="col l4 ">
-                        <button class="btn waves-effect waves-light" id="save_submit">Save & Submit
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
                 </div>
-               
-               <textarea id="bulk_data"></textarea>
+
             </div>
-            
-<!--            <div class="row card blue">
-                <div class="col l12"><h1>NAUKRI SAMACHAR.COM</h1></div>
-            </div>-->
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/job_submit.js"></script>
-        <script>
-        $(document).ready(function() {
-            $('select').material_select();
-          });
-        </script>
+        
+        <footer class="site-footer blue" >
+            <p class="center  white-text" style="padding:1% 0 0 0">All rights reserved &copy; 2016 xgarbagelab.com</p>
+       </footer>
+     
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <!--<script src="js/jq_2.2.4.js"></script>-->
+      <!--<script src="js/materialize.js"></script>-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/jquery.film_roll.js"></script>
+   
+     
     </body>
 </html>

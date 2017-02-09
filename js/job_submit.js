@@ -1,6 +1,7 @@
 $(function(){
     $('#submit').click(function(){
         //alert("test");
+        var job_label=$('#job_label').val();
         var department_name = $('#department_name').val();
         var post = $('#post').val();
         var state = $('#state').val();
@@ -16,9 +17,6 @@ $(function(){
         var last_date_of_fees_submission = $('#last_date_of_fees_submission').val();
         var others = $('#others').val();
         
-        
-
-        
 //        alert(department_name);
 //        alert(post);
 //        alert(state);
@@ -33,12 +31,10 @@ $(function(){
 //        alert(fees);
 //        alert(last_date_of_fees_submission);
 //        alert(others);
-
-
         $.ajax({
             type:'post',
             url:'job_submit_action.php',
-            data:{department_name:department_name,post:post,state:state,number_of_vacancies
+            data:{job_label:job_label,department_name:department_name,post:post,state:state,number_of_vacancies
             :number_of_vacancies,age_limit:age_limit,education_qualification:education_qualification,
             pay_scale:pay_scale,selection_process:selection_process,online_link:online_link,
             date_of_publish:date_of_publish,last_date_of_online_submission:last_date_of_online_submission,
@@ -49,7 +45,6 @@ $(function(){
                 $('.clear').val('');
                 $('.no-clear').val('');
                
-                
             }
         });
     });
@@ -59,7 +54,8 @@ $(function(){
 
 $(function(){
     $('#save_submit').click(function(){
-        //alert("test");
+       // alert("test");
+        var job_label = $('#job_label').val();
         var department_name = $('#department_name').val();
         var post = $('#post').val();
         var state = $('#state').val();
@@ -92,7 +88,7 @@ $(function(){
         $.ajax({
             type:'post',
             url:'job_submit_action.php',
-            data:{department_name:department_name,post:post,state:state,number_of_vacancies
+            data:{job_label:job_label,department_name:department_name,post:post,state:state,number_of_vacancies
             :number_of_vacancies,age_limit:age_limit,education_qualification:education_qualification,
             pay_scale:pay_scale,selection_process:selection_process,online_link:online_link,
             date_of_publish:date_of_publish,last_date_of_online_submission:last_date_of_online_submission,
@@ -101,7 +97,6 @@ $(function(){
             {
                 $('#bulk_data').val(data);
                 $('.clear').val('');
-                
             }
         });
     });
@@ -109,12 +104,3 @@ $(function(){
     
 });
 
-$(function(){
-
-  $('input[type="submit"]').click(function(){
-  $('#state').prop('selectedIndex',0);
-
-});
-  
-
-});
