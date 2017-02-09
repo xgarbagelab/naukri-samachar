@@ -1,0 +1,106 @@
+/*nav{
+    height: 165px;
+}
+
+.nav-wrapper{
+    padding-left:1%;
+}
+
+
+.top-nav{
+    
+    padding: 0 0 0 12%;
+    width:120%;
+    align-content: center;
+}
+
+.top-nav>li{
+    width:200px;
+    height: 165px;
+    padding-left: 0;
+    text-align: center;
+}
+
+.top-nav>li>a{
+    color:white;
+    padding-top:50px;
+    
+   
+}
+
+.top-nav>li>a:hover{
+    border-bottom: 5px solid white;
+    background-color: black;
+}*/
+
+/*sticky footer */
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -60px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 60px; 
+}
+.site-footer {
+  /*background: orange;*/
+  font-family:copyb;
+}
+/*sticky footer end*/      
+.nav-logo>img{
+    margin: 10% 0 0 0;
+}
+.nav-bar{
+    height: 150px;
+}
+
+.nav-bar>span{
+   font-size: 150%;
+   line-height: 7;
+}
+
+.nav-bar>span>a{
+    color:white;
+}
+
+.nav-bar>span>a:hover{
+    border-bottom: 5px solid white;
+    
+}
+
+.home-content>p{
+    font-size:100%;
+    text-align: justify;
+    padding: 0 0 0 2%;
+}
+
+
+#slider2-box
+{
+    width:125%;
+    margin:0 0 0 6.8%;
+}
+#slider2
+{
+  width:100%;  
+}
+
+.job-post{
+   /*border-radius:25px 25px 25px 25px;*/
+   border-right:4px solid white;
+}
+
+
+
+
+
