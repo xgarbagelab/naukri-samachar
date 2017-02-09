@@ -58,15 +58,15 @@ html, body {
 }
 /*sticky footer end*/      
 .nav-logo>img{
-    margin: 0 0 0 -15%;
+    margin: 10% 0 0 0;
 }
 .nav-bar{
-    height: 100px;
+    height: 150px;
 }
 
 .nav-bar>span{
    font-size: 150%;
-   line-height: 5;
+   line-height: 7;
 }
 
 .nav-bar>span>a{
@@ -79,7 +79,7 @@ html, body {
 }
 
 .home-content>p{
-    font-size:180%;
+    font-size:100%;
     text-align: justify;
     padding: 0 0 0 2%;
 }

@@ -63,7 +63,13 @@
                                 contents. We will be collaborating with all the famous coaching 
                                 centers those helps the hunters to chose the best on based on 
                                 their demographical and purpose. So please be keep in touch for 
-                                better performance.</p>
+                                better performance. We are trying to keep job hunting easy so that 
+                                you just checkout your desire jobs and prepare to get them easily.
+                                
+                                You can check our course tab to get the content which help you
+                                to get the job and help you too prepare for it in a systematic way.
+                                You can also create account to checkout the book-marked job anywhere
+                                anytime.</p>
 
                                 <div class="col l9 m9 s9 ">
                                     <div class="box box-default" id="slider2-box">
@@ -99,13 +105,13 @@
                                     </div>
                                 </div>
 
-                                <div class="col l12 m12 s12" style="margin: -12% 0 0 2%;">
+<!--                                <div class="col l12 m12 s12" style="margin: -12% 0 0 2%;">
                                     <img src="images/dominos.png" width="200" height="300">                        
                                     <img src="images/dominos.png" width="200" height="300">
                                     <img src="images/dominos.png" width="200" height="300">
                                     <img src="images/dominos.png" width="200" height="300">
                                     <img src="images/dominos.png" width="245" height="300">
-                            </div>
+                                </div>-->
                         </div>
 
 
