@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NAUKRI SAMACHAR-LOGIN</title>
         <link rel="stylesheet" href="css/font.css">
-        <link rel="stylesheet" href="css/materialize.css">
+        <!--<link rel="stylesheet" href="css/materialize.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" >
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
@@ -269,18 +270,18 @@
                         </div>
                         
                          <div class="input-field col s4">
-                          <input id="online_link" class="clear" name="online_link" type="text" class="validate">
+                          <input id="online_link" class="clear " name="online_link" type="text" class="validate">
                           <label for="online_link">Online Link</label>
                         </div>
                     
                          <div class=" col s4">
                            <label>Date of Publish</label>
-                          <input for="date_of_publish" id="date_of_publish" class="clear" name="Date_of_Publish" type="date" class="datepicker">
+                          <input for="date_of_publish" id="date_of_publish" class="clear input-field datepicker" name="Date_of_Publish" type="text" class="">
                         </div>
                         
                         <div class=" col s4">
                           <label for="Last_Date_of_Online_Submission">Last Date of Online Submission</label>
-                          <input id="last_date_of_online_submission" class="clear" name="Last_Date_of_Online_Submission" type="date" class="datepicker">
+                          <input id="last_date_of_online_submission" class="clear datepicker input" name="Last_Date_of_Online_Submission" type="text">
                         </div>
                         
                         <div class="input-field col s4">
@@ -290,7 +291,7 @@
                     
                         <div class=" col s4">
                             <label for="Last_Date_of_Fees_Submission">Last Date of Fees Submission</label>
-                          <input id="last_date_of_fees_submission" class="clear" name="Last_Date_of_Fees_Submission" type="date" class="datepicker">
+                          <input id="last_date_of_fees_submission" class="clear datepicker" name="Last_Date_of_Fees_Submission" type="text" >
                         </div>
                         <div class="input-field col s4">
                           <input id="others" class="clear" name="Others" type="text" class="validate">
@@ -316,7 +317,8 @@
            
     </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="js/materialize.js"></script>
+      <!--<script src="js/materialize.js"></script>-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
       <script src="js/main.js"></script>
       <script src="js/job_submit.js"></script>
       
@@ -324,6 +326,7 @@
           //select
         $(document).ready(function() {
             $('select').material_select();
+            $('input').pickadate();
           });
         </script>
     </body>

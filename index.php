@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>NAUKRI SAMACHAR</title>
         <link rel="stylesheet" href="css/font.css">
-        <link rel="stylesheet" href="css/materialize.css">
+        <!--<link rel="stylesheet" href="css/materialize.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.css">
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Corben' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
@@ -177,6 +178,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
       <script src="js/main.js"></script>
       <script src="js/jquery.film_roll.js"></script>
+      <script>
+        
+      </script>
    
      
     </body>
