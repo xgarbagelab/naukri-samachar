@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="css/font.css">
         <link rel="stylesheet" href="css/materialize.css">
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Corben' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" >
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" href="images/favicon.png">
@@ -56,20 +58,14 @@
                 <div class="row home-main" >
                     <div class="col l12 m12 s12">
                         <div class="col l9 m9 s9 home-content">
-                                <p>NS (Naukri Samachaar) is a portal for all the government job 
+                            <p style="font-family: 'Nobile', Helvetica, Arial, sans-serif;">NS (Naukri Samachaar) is a portal for all the government job 
                                 seekers. This portal make the job easy for all the job hunters. 
                                 This portal will update all the hunters with new opening in 
                                 different Government departments with the massive collection of 
                                 contents. We will be collaborating with all the famous coaching 
                                 centers those helps the hunters to chose the best on based on 
                                 their demographical and purpose. So please be keep in touch for 
-                                better performance. We are trying to keep job hunting easy so that 
-                                you just checkout your desire jobs and prepare to get them easily.
-                                
-                                You can check our course tab to get the content which help you
-                                to get the job and help you too prepare for it in a systematic way.
-                                You can also create account to checkout the book-marked job anywhere
-                                anytime.</p>
+                                better performance.</p>
 
                                 <div class="col l9 m9 s9 " >
                                     <div class="box box-default " id="slider2-box">
