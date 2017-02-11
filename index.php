@@ -20,20 +20,20 @@
                             <img src="images/naukri_samachar_new_3.png" width="140" class=" responsive-img"> 
                         </div>
 
-                        <div class="col l2 m2 s2 nav-bar blue card">
+                        <div class="col l2 m2 s2 nav-bar blue ">
                             <span><a href="#">HOME</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar orange card">
+                        <div class="col l2 m2 s2 nav-bar orange ">
                             <span><a href="#">JOB PORTAL</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar amber card">
+                        <div class="col l2 m2 s2 nav-bar amber ">
                             <span><a href="#">COURSE PORTAL</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar yellow card">
+                        <div class="col l2 m2 s2 nav-bar yellow ">
                             <span><a href="#">CONTACT US</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar red card">
-                            <span><a href="#login">LOGIN</a></span>
+                        <div class="col l2 m2 s2 nav-bar nav-bar-login red ">
+                            <span><a href="#login"><i class="fa fa-lock fa-3x" style=""></i></a></span>
                         </div>
                     </div>
                     <hr style="border:5px solid blue"> 
@@ -47,7 +47,7 @@
                         <li class="orange card" ><a class="orange" href="badges.html">JOB PORTAL</a></li>
                         <li class="yellow card"><a class="Yellow" href="collapsible.html">COURSE PORTAL</a></li>
                         <li class="green card"><a class="green" href="mobile.html">CONTACT US</a></li>
-                        <li class="red card"><a  class="red" href="login.php">LOG-IN</a></li>
+                        <li class="red card"><a  class="red" href="login.php"><i class="fa fa-sign-in fa-2x"></i></a></li>
                         <!--<li class="amber"><a  class="amber" href="mobile.html">SIGN-IN</a></li>-->
                       </ul>
                     <!--</div>-->
@@ -63,19 +63,21 @@
                                 contents. We will be collaborating with all the famous coaching 
                                 centers those helps the hunters to chose the best on based on 
                                 their demographical and purpose. So please be keep in touch for 
-                                better performance. We are trying to keep job hunting easy so that 
-                                you just checkout your desire jobs and prepare to get them easily.
-                                
-                                You can check our course tab to get the content which help you
-                                to get the job and help you too prepare for it in a systematic way.
-                                You can also create account to checkout the book-marked job anywhere
-                                anytime.</p>
+                                better performance.</p>
 
-                                <div class="col l9 m9 s9 ">
-                                    <div class="box box-default" id="slider2-box">
-                                        <div id='slider2'>
-                                            <div class="card red white-text center job-post">
-                                                <h5 class="card-panel blue"><br>South India Banks Jobs</h5>
+                                <div class="col l9 m9 s9 " >
+                                    <div class="box box-default " id="slider2-box">
+                                        <div id="slider2"  >
+                                            <div class="card center job-post">
+                                                <h5 class=""><br>South India Banks Jobs</h5>
+                                                <p>201 Vacancies-PO - PAN India</p>
+                                                <p>Age - Not more than 25 years as on 31.12.2016.</p> 
+                                                <p>Candidate should be born on or after 01.01.1992</p>
+                                                <p>and on or before 31.12.1996</p>
+                                                <p><a href="#" class="center">See Details</a></p>
+                                            </div>
+                                            <div class="card center job-post">
+                                                <h5 class=" "><br>South India Banks Jobs</h5>
                                                 <p>201 Vacancies-PO - PAN India</p>
                                                 <p>Age - Not more than 25 years as on 31.12.2016.</p> 
                                                 <p>Candidate should be born on or after 01.01.1992</p>
@@ -83,17 +85,17 @@
                                                 <p><a href="#" class="center">See Details</a></p>
                                             </div>
 
-                                            <div class="card amber white-text center job-post">
-                                                <h5 class="card-panel blue"><br>South India Banks Jobs</h5>
+                                            <div class="card center job-post"  >
+                                                <h5 class=" "><br>South India Banks Jobs</h5>
                                                 <p>201 Vacancies-PO - PAN India</p>
                                                 <p>Age - Not more than 25 years as on 31.12.2016.</p> 
                                                 <p>Candidate should be born on or after 01.01.1992</p>
                                                 <p>and on or before 31.12.1996</p>
                                                 <p><a href="#" class="center">See Details</a></p>
                                             </div>
-
-                                            <div class="card purple white-text center job-post" >
-                                                <h5 class="card-panel blue"><br>South India Banks Jobs</h5>
+                                            
+                                             <div class="card center job-post" >
+                                                <h5 class=" "><br>South India Banks Jobs</h5>
                                                 <p>201 Vacancies-PO - PAN India</p>
                                                 <p>Age - Not more than 25 years as on 31.12.2016.</p> 
                                                 <p>Candidate should be born on or after 01.01.1992</p>
@@ -115,10 +117,10 @@
                         </div>
 
 
-                        <div class="col l3 m3 s3">
+                        <div class="col l3 m3 s3" >
                             <p><img src="images/dominos.png" width="350" class="responsive-img" ></p>
                             <p><img src="images/dominos.png" width="350" class="responsive-img"></p>
-                            <p><img src="images/dominos.png" width="350" class="responsive-img"></p>
+                            <!--<p><img src="images/dominos.png" width="350" class="responsive-img"></p>-->
                         </div>
                     </div>
                 </div>
@@ -128,13 +130,13 @@
                     <div class="modal-content">
                        <div class="row">
                             <div class="" >
-                                <div class="col l12 m12 s12">
-                                    <h4 class="black-text center " >LOGIN </h4>
+                                <div class="col l12 m12 s12 center">
+                                    <!--<h4 class="black-text center " >LOGIN </h4>-->
 
-                                    <!--<img src="images/naukri_samachar_new_3.png" class="">-->
+                                    <img src="images/ns_login_logo_200.png" class=" ">
                                 </div>
 
-                                <hr style="border:5px solid black">
+                                <!--<hr style="border:5px solid black">-->
                                 <div class="input-field col l12 m12 s12">
                                     <input id="uname"  name="uname" type="text" class="validate">
                                     <label for="uname"><i class="fa fa-sign-in fa-2x"></i>&nbsp; Enter Your Username </label>
@@ -162,13 +164,12 @@
             </div>
         </div>
         
-        <footer class="site-footer blue" >
+<!--        <footer class="site-footer blue" >
             <p class="center  white-text" style="padding:1% 0 0 0">All rights reserved &copy; 2016 xgarbagelab.com</p>
-       </footer>
+       </footer>-->
      
       
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <!--<script src="js/jq_2.2.4.js"></script>-->
       <!--<script src="js/materialize.js"></script>-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>

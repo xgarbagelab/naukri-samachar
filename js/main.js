@@ -19,8 +19,11 @@ $('.modal').modal({
         this.film_rolls || (this.film_rolls = []);
         this.film_rolls['slider2'] = new FilmRoll({
         container: '#slider2',
-        height: 410,
+        height: 250,
         });
         return true;
         });
         }).call(this);
+        
+        
+       
