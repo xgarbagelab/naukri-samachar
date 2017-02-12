@@ -72,7 +72,7 @@
                                 You can check our course tab to get the content which help you
                                 to get the job and help you too prepare for it in a systematic way.
                                 You can also create account to checkout the book-marked job anywhere
-                                anytime.</p>
+                                anytime..</p>
 
                                 <div class="col l9 m9 s9 " >
                                     <div class="box box-default " id="slider2-box">
