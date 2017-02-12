@@ -58,15 +58,16 @@ html, body {
 }
 /*sticky footer end*/      
 .nav-logo>img{
-    margin: 10% 0 0 0;
+    margin: 0 0 0 -15%;
 }
 .nav-bar{
-    height: 150px;
+    height: 100px;
+    font-family: 'Corben', Georgia, Times, serif;
 }
 
 .nav-bar>span{
-   font-size: 150%;
-   line-height: 7;
+   font-size: 130%;
+   line-height: 5;
 }
 
 .nav-bar>span>a{
@@ -78,8 +79,16 @@ html, body {
     
 }
 
+.nav-bar-login>span{
+    line-height: 6.8;
+}
+.nav-bar-login>span>a:hover{
+     border-bottom: none;
+     
+}
+
 .home-content>p{
-    font-size:100%;
+    font-size:180%;
     text-align: justify;
     padding: 0 0 0 2%;
 }
