@@ -66,7 +66,13 @@
                                 contents. We will be collaborating with all the famous coaching 
                                 centers those helps the hunters to chose the best on based on 
                                 their demographical and purpose. So please be keep in touch for 
-                                better performance.</p>
+                                better performance. We are trying to keep job hunting easy so that 
+                                you just checkout your desire jobs and prepare to get them easily.
+                                
+                                You can check our course tab to get the content which help you
+                                to get the job and help you too prepare for it in a systematic way.
+                                You can also create account to checkout the book-marked job anywhere
+                                anytime</p>
 
                                 <div class="col l9 m9 s9 " >
                                     <div class="box box-default " id="slider2-box">
@@ -178,9 +184,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
       <script src="js/main.js"></script>
       <script src="js/jquery.film_roll.js"></script>
-      <script>
-        
-      </script>
    
      
     </body>
