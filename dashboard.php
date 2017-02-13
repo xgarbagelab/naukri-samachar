@@ -55,6 +55,8 @@
             .display-none{
               display:none
             }
+            
+            
         </style>
     </head>
     <body>
@@ -192,16 +194,16 @@
             <div class="row "><!--JOB ENTRY-->
                 <div class="col l9 m9 s9 card" style="border-top:5px solid black;border-bottom: 5px solid black">
                     <div class="input-field col s4">
-                        <input type="text"  id="job_label" class="clear" name="job_label"  class="validate">
+                        <input type="text"  id="job_label" class="clear validate">
                         <label for="job_label">Job Label</label>
                     </div>
                     <div class="input-field col s4">
-                        <input type="text"  id="department_name" class="clear" name="department_name"  class="validate">
+                        <input type="text"  id="department_name" class="clear validate">
                         <label for="department_name">Department Name</label>
                     </div>
                     
                     <div class="input-field col s4">
-                        <input type="text" id="post" class="clear" name="post"  class="validate">
+                        <input type="text" id="post" class="clear validate" name="post">
                         <label for="post">Post</label>
                     </div>
                     
@@ -245,56 +247,56 @@
                         </div>
                     
                         <div class="input-field col s4">
-                          <input type="text"  id="number_of_vacancies" class="no-clear" name="number_of_vacancies"   class="validate">
+                          <input type="text"  id="number_of_vacancies" class="no-clear validate">
                           <label for="number_of_vacancies">Number of Vacancies</label>
                         </div>
                         
                         <div class="input-field col s4">
-                          <input type="text" id="age_limit" class="clear" name="age_limit"  class="validate">
+                          <input type="text" id="age_limit" class="clear validate">
                           <label for="age_limit">Age Limit</label>
                         </div>
                         
                         <div class="input-field col s4">
-                          <input type="text" id="education_qualification" class="clear" name="education_qualification"  class="validate">
+                          <input type="text" id="education_qualification" class="clear validate">
                           <label for="education_qualification">Education Qualification</label>
                         </div>
                     
                          <div class="input-field col s4">
-                          <input id="pay_scale" class="clear" name="pay_scale" type="text" class="validate">
+                          <input type="text" id="pay_scale" class="clear validate" >
                           <label for="pay_scale">Pay Scale</label>
                         </div>
                         
                         <div class="input-field col s4">
-                          <input type="text" id="selection_process" class="clear" name="selection_process"  class="validate">
+                          <input type="text" id="selection_process" class="clear validate">
                           <label for="selection_process">Selection Process</label>
                         </div>
                         
                          <div class="input-field col s4">
-                          <input type="text" id="online_link" class="clear " name="online_link"  class="validate">
+                          <input type="text" id="online_link" class="clear validate">
                           <label for="online_link">Online Link</label>
                         </div>
                     
                          <div class=" col s4">
                            <label>Date of Publish</label>
-                          <input type="text" for="date_of_publish" id="date_of_publish" class="clear input-field date" name="Date_of_Publish" >
+                          <input type="text" for="date_of_publish" id="date_of_publish" class="clear input-field date">
                         </div>
                         
                         <div class=" col s4">
                           <label for="Last_Date_of_Online_Submission">Last Date of Online Submission</label>
-                          <input type="text" id="last_date_of_online_submission" class="clear date" name="Last_Date_of_Online_Submission" >
+                          <input type="text" id="last_date_of_online_submission" class="clear date validate">
                         </div>
                         
                         <div class="input-field col s4">
-                          <input type="text" id="fees" class="clear" name="Fees"   class="validate">
+                          <input type="text" id="fees" class="clear validate">
                           <label for="Fees">Fees</label>
                         </div>
                     
                         <div class=" col s4">
                             <label for="Last_Date_of_Fees_Submission">Last Date of Fees Submission</label>
-                          <input type="text" id="last_date_of_fees_submission" class="clear date" name="Last_Date_of_Fees_Submission"  >
+                          <input type="text" id="last_date_of_fees_submission" class="clear date validate" >
                         </div>
                         <div class="input-field col s4">
-                          <input type="text" id="others" class="clear" name="Others"  class="validate">
+                          <input type="text" id="others" class="clear validate">
                           <label for="Others">Others</label>
                         </div>
                     
@@ -327,6 +329,7 @@
         $(document).ready(function() {
             $('select').material_select();
             $('.date').pickadate();
+           
           });
         </script>
     </body>
