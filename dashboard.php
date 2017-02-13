@@ -23,7 +23,7 @@
                     <!--<div class="row" style="padding: -5% 0 0 0; margin: 0% 0 0 -1%"  >-->
                         <div class="col l12 m12 s12" style="padding: 0 0 0 0; margin: -0.5% 0 0 0%;">
                             <!-- 0. MENU -->
-                            <div class="col l2 m2 s12 card    blue z-depth-2" style="border-radius:25px 10px 10px 25px; ">
+                            <div class="col l2 m2 s12 card    blue z-depth-2" style="border-radius:25px 10px 10px 25px;border-right: 5px dashed white; ">
                                 <div class="col l12 m12 s12 center" id="side-navbar">
                                     <p><a href="#">HOME</a></p><hr>
                                     <p><a href="#">JOB ENTRY</a></p><hr>
