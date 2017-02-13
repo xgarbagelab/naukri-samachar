@@ -52,7 +52,7 @@
                                 </div>
 
                                 <div class="input-field col s4">
-                                    <input type="text" id="post" class="clear validate" name="post">
+                                    <input type="text" id="post" class="clear validate">
                                     <label for="post">Post</label>
                                 </div>
                     
@@ -122,17 +122,17 @@
 
                                 <div class=" col s4">
                                   <label for="date_of_publish" class="date">Date of Publish</label>
-                                  <input type="text"  placeholder="Select Date" id="date_of_publish" class="clear input-field date">
+                                  <input type="text"  placeholder="Select" id="date_of_publish" class="clear input-field date">
                                 </div>
                                 
                                 <div class=" col s4">
                                   <label for="last_date_of_fees_submission" class="date">Last Date of Fees Submission</label>
-                                  <input type="text" placeholder="Select Date" id="last_date_of_fees_submission"  class="clear date validate" >
+                                  <input type="text" placeholder="Select Date" id="last_date_of_fees_submission"  class="clear date" >
                                 </div>
 
                                 <div class=" col s4">
                                   <label for="last_date_of_online_submission" class="date">Last Date of Online Submission</label>
-                                  <input type="text" placeholder="Select Date"  id="last_date_of_online_submission" class="clear date validate">
+                                  <input type="text" placeholder="Select Date"  id="last_date_of_online_submission" class="clear date">
                                 </div>
                         
                                 <div class="input-field col s4">

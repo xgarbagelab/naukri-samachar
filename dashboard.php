@@ -203,7 +203,7 @@
                     </div>
                     
                     <div class="input-field col s4">
-                        <input type="text" id="post" class="clear validate" name="post">
+                        <input type="text" id="post" class="clear validate">
                         <label for="post">Post</label>
                     </div>
                     
