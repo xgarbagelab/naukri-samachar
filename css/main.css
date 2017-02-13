@@ -112,7 +112,7 @@ html, body {
 
 label{
     font-family: carnas_regular;
-    color:black;
+    color:black !important;
 }
 
 .input-field label {
@@ -132,11 +132,13 @@ label{
 .input-field input[type=text].valid {
      border-bottom: 1px solid #000;
      box-shadow: 0 1px 0 0 #000;
+     color:black;
    }
    
    .input-field input[type=text].invalid {
      border-bottom: 1px solid #000;
      box-shadow: 0 1px 0 0 #000;
+     color:black;
    }
    
    .date{
@@ -171,26 +173,26 @@ label{
   }
   
   .picker__day--infocus{
-       color:white;
+       color:black !important;
     
   }
 
 .picker__day--today{
-   color:white;
+   color: #2196F3 !important;
    /*background-color: #2196F3;*/ 
 }
 
 .picker__day--selected{
-    color:white;
+    color:white !important;
     background-color: #2196F3 !important;
 }
 
 .picker__day--highlighted{
-    color:#2196F3 !important;
+    color:black !important;
     /*background-color: #2196F3 !important;*/
 }
   
   .picker__day{
       color:black;
   }
-
+  
