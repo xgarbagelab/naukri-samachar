@@ -4,6 +4,7 @@
 }
 html, body {
   height: 100%;
+  font-family: carnas_regular;
 }
 .page-wrap {
   min-height: 100%;
@@ -80,9 +81,15 @@ html, body {
     margin: -1% 0 0 0;
 }
 
-
 /*Dashboard*/
 
+
+/*COMMON */
+#job_entry_main,#job_list_main,#user_account_main{
+    display:none;
+}
+
+/* 0 DASHBOARD MENU */
 #side-navbar{
  
 }
@@ -104,10 +111,21 @@ html, body {
     
 }
 
+/*1 DASHBOARD HOME */
+
+#dashboard_home{
+    
+}
+
+#dashboard_home>h1{
+    font-family: carnas_light;
+}
+
+/* 2 JOB ENTRY */
 #job_entry_main{
     /*border-top:5px solid black;*/
     /*border-bottom: 5px solid black;*/
-    margin: 5% 0 0 0;
+    margin: 1% 0 0 0;
 }
 
 label{
@@ -195,4 +213,17 @@ label{
   .picker__day{
       color:black;
   }
+  
+  /* 3. JOB LIST */
+  
+  #job_list_main{
+      
+  }
+  
+  /*4 USER ACCOUNT */
+  
+  #user_account_main{
+      
+  }
+  
   
