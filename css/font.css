@@ -1,0 +1,39 @@
+@font-face
+{
+  font-family:Cianan;
+  src:url('../fonts/Cianan-ur-Regular.otf');
+}
+
+@font-face
+{
+    font-family: carnas_light;
+    src:url('../fonts/carnas/carnas_light.otf');
+}
+@font-face
+{
+    font-family: carnas_light;
+    src:url('../fonts/carnas/carnas_light.woff');
+}
+
+@font-face
+{
+    font-family: carnas_regular;
+    src:url('../fonts/carnas/carnas_regular.otf');
+}
+@font-face
+{
+    font-family: carnas_regular;
+    src:url('../fonts/carnas/carnas_regular.woff');
+}
+
+@font-face
+{
+    font-family: carnas_thin;
+    src:url('../fonts/carnas/carnas_thin.otf');
+}
+@font-face
+{
+    font-family: carnas_thin;
+    src:url('../fonts/carnas/carnas_thin.woff');
+}
+
