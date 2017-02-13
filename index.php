@@ -15,28 +15,28 @@
             <div class="container-fluid">
                  <!--Navbar for large device-->
                 <div class="row  center hide-on-small-and-down">
-                    <div class="col l12 m12 s12">
+                    <div class="col l12 m12 s12 blue">
                         <div class="col l2 m2 s2 nav-logo">
                             <img src="images/naukri_samachar_new.png" class="responsive-img"> 
                         </div>
 
-                        <div class="col l2 m2 s2 nav-bar blue">
+                        <div class="col l2 m2 s2 nav-bar">
                             <span><a href="#">HOME</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar orange">
+                        <div class="col l2 m2 s2 nav-bar">
                             <span><a href="#">JOB PORTAL</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar amber">
+                        <div class="col l2 m2 s2 nav-bar ">
                             <span><a href="#">COURSE PORTAL</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar yellow">
+                        <div class="col l2 m2 s2 nav-bar">
                             <span><a href="#">CONTACT US</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar nav-bar-login red">
+                        <div class="col l2 m2 s2 nav-bar nav-bar-login">
                             <span><a href="#login"><i class="fa fa-lock fa-3x"></i></a></span>
                         </div>
                     </div>
-                    <hr style="border:5px solid blue"> 
+                    <!--<hr style="border:5px solid blue">--> 
                 </div>
 
                 <!--navbar for small device -->
