@@ -17,7 +17,7 @@
                 <div class="row  center hide-on-small-and-down">
                     <div class="col l12 m12 s12">
                         <div class="col l2 m2 s2 nav-logo">
-                            <img src="images/naukri_samachar_new_3.png" width="130" class="responsive-img"> 
+                            <img src="images/naukri_samachar_new.png" class="responsive-img"> 
                         </div>
 
                         <div class="col l2 m2 s2 nav-bar blue">
@@ -42,7 +42,7 @@
                 <!--navbar for small device -->
                       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons hide-on-med-and-up">menu</i></a>
                       <ul class="side-nav black-text " id="mobile-demo">
-                        <li class="center"><img src="images/naukri_samachar_new_3.png" width="140" class=""> </li>
+                        <li class="center"><img src="images/naukri_samachar_new.png" class="responsive-img"> </li>
                         <li class="blue card"><a class="blue" href="sass.html">HOME</a></li>
                         <li class="orange card" ><a class="orange" href="badges.html">JOB PORTAL</a></li>
                         <li class="yellow card"><a class="Yellow" href="collapsible.html">COURSE PORTAL</a></li>
@@ -120,26 +120,26 @@
                     <div class="modal-content">
                        <div class="row">
                             <div class="" >
-                                <div class="col l12 m12 s12 center">
-                                    <!--<h4 class="black-text center " >LOGIN </h4>-->
+                                <div class="col l12 m12 s12 center blue card">
+                                    <h4 class="black-text  center white-text" style="font-family: carnas_light;margin:1.3% 0 0 0" >LOGIN </h4>
 
-                                    <img src="images/ns_login_logo_200.png" class=" ">
+                                    <!--<img src="images/ns_login_logo_200.png" class=" ">-->
                                 </div>
 
                                 <!--<hr style="border:5px solid black">-->
                                 <div class="input-field col l12 m12 s12">
-                                    <input type="text" id="username"   class="validate">
-                                    <label for="username"><i class="fa fa-sign-in fa-2x"></i>&nbsp; Enter Your Username </label>
+                                    <input type="text" id="username">
+                                    <label for="username"><i class="fa fa-user fa-2x"></i>&nbsp; Enter Your Username </label>
                                 </div>
 
                                 <div class="input-field col l12 m12 s12">
-                                    <input type="password" id="password"  class="validate">
+                                    <input type="password" id="password" >
                                     <label for="password"><i class="fa fa-key fa-2x"></i>&nbsp;Enter Your Password </label>
                                 </div>
 
                                 <div class="input-field col l12 m12 s12 center">
                                     <!--<button class="btn-flat" id="submit">-->
-                                        <a class="white-text btn"  id="login_submit">SUBMIT<i class="material-icons right">send</i></a>
+                                        <a class="blue white-text btn"  id="login_submit">SUBMIT<i class="material-icons right">send</i></a>
 <!--                                </button>-->
                                 </div>
                             </div>
