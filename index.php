@@ -104,7 +104,22 @@
                         </div>
                         <form method="post">
                             <div class="col l2 m2 s2 nav-bar nav-bar-login">
-                                <span><a href="#login"><i class="fa fa-lock fa-3x"></i></a></span>
+                                <?php
+                                    if(isset($_SESSION['user_session']) && $_SESSION['roles'] == "ADMIN" ){
+                                       echo "<br><br>";
+                                       echo "<a href=dashboard.php class=white-text>GO TO DASHBOARD</a>";
+                                    }
+                                    
+                                    else if(isset($_SESSION['user_session'])  && $_SESSION['roles'] == "USER" ){
+                                       echo "<br><br>";
+                                       echo "<a href=user_account.php class=white-text>MY ACCOUNT</a>"; 
+                                    }
+                                    
+                                    else{
+                                       echo "<span><a href=#login><i class='fa fa-lock fa-3x'></i></a></span>";
+                                    }
+                                ?>
+                                
                             </div>
                         </form>
                     </div>
