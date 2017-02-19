@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+   $_SESSION['user_session'];
+   
+   if(!isset($_SESSION['user_session'])){
+       header("location:DatabaseConnection/Logout.php");
+   }
+?>
 <!doctype HTML>
 <html lang="en">
     <head>
@@ -22,6 +30,7 @@
                         </div>
                         
                         <div class=' right'>
+                            <button class="blue  btn"><a class="white-text" href="DatabaseConnection/Logout.php">LOGOUT</a></button>
                             <img src="images/xfb_logo.png" width="50px" class=''>
                         </div>
                         

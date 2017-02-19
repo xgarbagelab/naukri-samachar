@@ -1,3 +1,73 @@
+<?php
+
+/**
+ * Login Script
+ *
+ * @author Shivam Srivastava <xshivam@xgarbagelab.com>
+ * 
+ */
+    require_once('./DatabaseConnection/Connection.php');
+    $connection = new Connection();
+    $databaseConnection = $connection -> dbConnect();
+
+
+    include_once './DatabaseConnection/User.php';
+    $user = new USER($databaseConnection);
+
+   if($user->is_loggedin()!="")
+   {
+       $user_name = $_SESSION['user_name']. " - You are already Logged In";
+       echo "<script type='text/javascript'>alert('$user_name');</script>";
+   }
+    
+//     if(isset($_POST['login-btn']))
+//     {
+//         if($user->is_loggedin()!="")
+//         {
+//                 $user_name = $_SESSION['user_name']. " - You are already Logged In";
+//                 echo "<script type='text/javascript'>alert('$user_name');</script>";
+//                 if($_SESSION['role'] == "ADMIN") {
+//                     $user->redirect("./dashboard.php");
+//                 } else if ($_SESSION['role'] == "USER"){
+//                     //$user->redirect(USERPROFILE URL);
+//                 }
+//         } else {
+//             echo "<a href=#login></a>";
+//         }
+//     }
+    
+    if(isset($_POST['btn-login']))
+    {
+        // username and password sent from form
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+        // To protect MySQL injection (more detail about MySQL injection)
+        $username = stripslashes($username);
+        $password = stripslashes($password);
+        $username = mysql_real_escape_string($username);
+        $password = mysql_real_escape_string($password);
+
+        $status = $user ->login($username, $password);
+
+        if($status != 0){
+            $role = $user ->role($status);
+            if($role == "ADMIN") {
+                $_SESSION['roles'] = "ADMIN";
+                $user->redirect("./dashboard.php");
+            } 
+            else if($role == "USER"){
+                //$user->redirect("USERPROFILEPAGE") 
+                $_SESSION['roles'] = "USER";
+            } else {
+                   echo "<script type='text/javascript'>alert('$role');</script>";
+            }
+        } else {
+            $message = 'No Such User Exist';
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }
+    }
+?>
 <!doctype HTML>
 <html lang="en">
     <head>
@@ -32,9 +102,26 @@
                         <div class="col l2 m2 s2 nav-bar">
                             <span><a href="#">CONTACT US</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar nav-bar-login">
-                            <span><a href="#login"><i class="fa fa-lock fa-3x"></i></a></span>
-                        </div>
+                        <form method="post">
+                            <div class="col l2 m2 s2 nav-bar nav-bar-login">
+                                <?php
+                                    if(isset($_SESSION['user_session']) && $_SESSION['roles'] == "ADMIN" ){
+                                       echo "<br><br>";
+                                       echo "<a href=dashboard.php class=white-text>GO TO DASHBOARD</a>";
+                                    }
+                                    
+                                    else if(isset($_SESSION['user_session'])  && $_SESSION['roles'] == "USER" ){
+                                       echo "<br><br>";
+                                       echo "<a href=user_account.php class=white-text>MY ACCOUNT</a>"; 
+                                    }
+                                    
+                                    else{
+                                       echo "<span><a href=#login><i class='fa fa-lock fa-3x'></i></a></span>";
+                                    }
+                                ?>
+                                
+                            </div>
+                        </form>
                     </div>
                     <!--<hr style="border:5px solid blue">--> 
                 </div>
@@ -63,7 +150,13 @@
                                 contents. We will be collaborating with all the famous coaching 
                                 centers those helps the hunters to chose the best on based on 
                                 their demographical and purpose. So please be keep in touch for 
-                                better performance.</p>
+                                better performance. We are trying to keep job hunting easy so that 
+                                you just checkout your desire jobs and prepare to get them easily.
+                                
+                                You can check our course tab to get the content which help you
+                                to get the job and help you too prepare for it in a systematic way.
+                                You can also create account to checkout the book-marked job anywhere
+                                anytime.</p>
 
                                 <div class="col l9 m9 s9">
                                     <div class="box box-default" id="slider2-box">
@@ -127,21 +220,23 @@
                                 </div>
 
                                 <!--<hr style="border:5px solid black">-->
-                                <div class="input-field col l12 m12 s12">
-                                    <input type="text" id="username">
-                                    <label for="username"><i class="fa fa-user fa-2x"></i>&nbsp; Enter Your Username </label>
-                                </div>
+                                <form method="post" name="Login_Form">
+                                    <div class="input-field col l12 m12 s12">
+                                        <input type="text" id="username" name="username">
+                                        <label for="username"><i class="fa fa-user fa-2x"></i>&nbsp; Enter Your Username </label>
+                                    </div>
 
-                                <div class="input-field col l12 m12 s12">
-                                    <input type="password" id="password" >
-                                    <label for="password"><i class="fa fa-key fa-2x"></i>&nbsp;Enter Your Password </label>
-                                </div>
+                                    <div class="input-field col l12 m12 s12">
+                                        <input type="password" id="password" name="password">
+                                        <label for="password"><i class="fa fa-key fa-2x"></i>&nbsp;Enter Your Password </label>
+                                    </div>
 
-                                <div class="input-field col l12 m12 s12 center">
-                                    <!--<button class="btn-flat" id="submit">-->
-                                        <a class="blue white-text btn"  id="login_submit">SUBMIT<i class="material-icons right">send</i></a>
-<!--                                </button>-->
-                                </div>
+                                    <div class="input-field col l12 m12 s12 center">
+                                        <button class="btn-flat" id="submit" name="btn-login">
+                                            <a class="blue white-text btn"  id="login_submit">SUBMIT<i class="material-icons right">send</i></a>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
