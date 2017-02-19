@@ -24,6 +24,7 @@ class Connection extends DatabaseConfig {
     protected $passCode;
     
     function Connection() {
+        session_start();
         $this ->connectionString = null;
         $dbPara = new DatabaseConfig();
         $this -> hostName = $dbPara -> serverName;
@@ -33,9 +34,12 @@ class Connection extends DatabaseConfig {
     }
     
     function dbConnect() {
-        $this -> connectionString = mysql_connect($this -> serverName,$this -> userName,$this -> passCode);
-        mysql_select_db($this -> databaseName,$this -> connectionString);
+        try{
+            $this -> connectionString = new PDO("mysql:host=$this->hostName; dbname=$this->databaseName", $this->userName, $this->passCode);
+            $this->connectionString->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
         return $this -> connectionString;
-        return mysqli_connect($this -> hostName, $this ->userName, $this->passCode, $this->databaseName);
     }
 }
