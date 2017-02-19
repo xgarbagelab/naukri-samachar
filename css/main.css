@@ -1,44 +1,10 @@
-/*nav{
-    height: 165px;
-}
-
-.nav-wrapper{
-    padding-left:1%;
-}
-
-
-.top-nav{
-    
-    padding: 0 0 0 12%;
-    width:120%;
-    align-content: center;
-}
-
-.top-nav>li{
-    width:200px;
-    height: 165px;
-    padding-left: 0;
-    text-align: center;
-}
-
-.top-nav>li>a{
-    color:white;
-    padding-top:50px;
-    
-   
-}
-
-.top-nav>li>a:hover{
-    border-bottom: 5px solid white;
-    background-color: black;
-}*/
-
 /*sticky footer */
 * {
   margin: 0;
 }
 html, body {
   height: 100%;
+  font-family: carnas_regular;
 }
 .page-wrap {
   min-height: 100%;
@@ -62,7 +28,8 @@ html, body {
 }
 .nav-bar{
     height: 100px;
-    font-family: 'Corben', Georgia, Times, serif;
+    font-family:carnas_light;
+    font-weight: bolder;
 }
 
 .nav-bar>span{
@@ -88,9 +55,10 @@ html, body {
 }
 
 .home-content>p{
-    font-size:180%;
+    font-size:150%;
     text-align: justify;
     padding: 0 0 0 2%;
+    font-family: carnas_regular;
 }
 
 
@@ -109,7 +77,153 @@ html, body {
    border-right:4px solid white;
 }
 
+#mobile-demo>li{
+    margin: -1% 0 0 0;
+}
+
+/*Dashboard*/
 
 
+/*COMMON */
+#job_entry_main,#job_list_main,#user_account_main{
+    display:none;
+}
 
+/* 0 DASHBOARD MENU */
+#side-navbar{
+ 
+}
 
+#side-navbar>p{
+   /*border-bottom: 3px solid purple;*/  
+}
+
+#side-navbar>p>a{
+    font-family: carnas_light;
+    font-size: 150%;
+    line-height: 3;
+    color:white;
+}
+
+#side-navbar>p:hover{
+    background-color:#F4BF00;
+    border-top:2px solid white;
+    
+}
+
+/*1 DASHBOARD HOME */
+
+#dashboard_home{
+    
+}
+
+#dashboard_home>h1{
+    font-family: carnas_light;
+}
+
+/* 2 JOB ENTRY */
+#job_entry_main{
+    /*border-top:5px solid black;*/
+    /*border-bottom: 5px solid black;*/
+    margin: 1% 0 0 0;
+}
+
+label{
+    font-family: carnas_regular;
+    color:black !important;
+}
+
+.input-field label {
+    color: black;
+}
+   
+.input-field input[type=text]:focus + label {
+    color: black;
+}
+   
+.input-field input[type=text]:focus {
+    color:black;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+.input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+     color:black;
+   }
+   
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+     color:black;
+   }
+   
+   .date{
+       font-size: 15px;
+   }
+   
+   .select-dropdown{
+       color:black;
+   }
+/*   span.caret{
+       color:red;
+   }*/
+   
+   .dropdown-content li > span {
+       color:black
+   }
+
+  /*calendar date*/
+  .picker__weekday-display{
+      font-family: carnas_regular;
+      font-weight: bold;
+  }
+  .picker__date-display,.picker__weekday-display,.picker__month-display{
+      color:white;
+      background-color:#2196F3;
+      font-family: carnas_regular;
+      font-weight: bold;
+  }
+  
+  .picker__today,.picker__close{
+      color:black;
+  }
+  
+  .picker__day--infocus{
+       color:black !important;
+    
+  }
+
+.picker__day--today{
+   color: #2196F3 !important;
+   /*background-color: #2196F3;*/ 
+}
+
+.picker__day--selected{
+    color:white !important;
+    background-color: #2196F3 !important;
+}
+
+.picker__day--highlighted{
+    color:black !important;
+    /*background-color: #2196F3 !important;*/
+}
+  
+  .picker__day{
+      color:black;
+  }
+  
+  /* 3. JOB LIST */
+  
+  #job_list_main{
+      
+  }
+  
+  /*4 USER ACCOUNT */
+  
+  #user_account_main{
+      
+  }
+  
+  
