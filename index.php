@@ -14,27 +14,27 @@
     include_once './DatabaseConnection/User.php';
     $user = new USER($databaseConnection);
 
-//    if($user->is_loggedin()!="")
-//    {
-//        $user_name = $_SESSION['user_name']. " - You are already Logged In";
-//        echo "<script type='text/javascript'>alert('$user_name');</script>";
-//    }
+   if($user->is_loggedin()!="")
+   {
+       $user_name = $_SESSION['user_name']. " - You are already Logged In";
+       echo "<script type='text/javascript'>alert('$user_name');</script>";
+   }
     
-    if(isset($_POST['login-btn']))
-    {
-        if($user->is_loggedin()!="")
-        {
-                $user_name = $_SESSION['user_name']. " - You are already Logged In";
-                echo "<script type='text/javascript'>alert('$user_name');</script>";
-                if($_SESSION['role'] == "ADMIN") {
-                    $user->redirect("./dashboard.php");
-                } else if ($_SESSION['role'] == "USER"){
-                    //$user->redirect(USERPROFILE URL);
-                }
-        } else {
-            echo "<a href=#login></a>";
-        }
-    }
+//     if(isset($_POST['login-btn']))
+//     {
+//         if($user->is_loggedin()!="")
+//         {
+//                 $user_name = $_SESSION['user_name']. " - You are already Logged In";
+//                 echo "<script type='text/javascript'>alert('$user_name');</script>";
+//                 if($_SESSION['role'] == "ADMIN") {
+//                     $user->redirect("./dashboard.php");
+//                 } else if ($_SESSION['role'] == "USER"){
+//                     //$user->redirect(USERPROFILE URL);
+//                 }
+//         } else {
+//             echo "<a href=#login></a>";
+//         }
+//     }
     
     if(isset($_POST['btn-login']))
     {
