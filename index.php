@@ -1,3 +1,5 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 <?php
 
 /**
@@ -16,8 +18,8 @@
 
    if($user->is_loggedin()!="")
    {
-       $user_name = $_SESSION['user_name']. " - You are already Logged In";
-       echo "<script type='text/javascript'>alert('$user_name');</script>";
+       //$user_name = $_SESSION['user_name']. " - You are already Logged In";
+       //echo "<script type='text/javascript'>alert('$user_name');</script>";
    }
     
 //     if(isset($_POST['login-btn']))
@@ -41,7 +43,6 @@
         // username and password sent from form
         $username=$_POST['username'];
         $password=$_POST['password'];
-
         // To protect MySQL injection (more detail about MySQL injection)
         $username = stripslashes($username);
         $password = stripslashes($password);
@@ -60,14 +61,22 @@
                 //$user->redirect("USERPROFILEPAGE") 
                 $_SESSION['roles'] = "USER";
             } else {
-                   echo "<script type='text/javascript'>alert('$role');</script>";
+                   //echo "<script>alert('$role');</script>";
+                   echo "<script>Materialize.toast('$role', 4000,'green');</script>";
             }
         } else {
             $message = 'No Such User Exist';
-            echo "<script type='text/javascript'>alert('$message');</script>";
+            //echo "<script type='text/javascript'>alert('$message');</script>";
+            echo "<script> $(function(){
+                    Materialize.toast('$message', 4000,'red');
+                    }); </script>";
+            
         }
     }
 ?>
+
+
+
 <!doctype HTML>
 <html lang="en">
     <head>
@@ -85,43 +94,42 @@
             <div class="container-fluid">
                  <!--Navbar for large device-->
                 <div class="row  center hide-on-small-and-down">
-                    <div class="col l12 m12 s12 blue">
-                        <div class="col l2 m2 s2 nav-logo">
+                    <div class="col l12 m12 s12 card">
+                        <div class="col l2 m2 s2 nav-logo ">
                             <img src="images/naukri_samachar_new.png" class="responsive-img"> 
                         </div>
 
-                        <div class="col l2 m2 s2 nav-bar">
+                        <div class="col l2 m2 s2 nav-bar  blue">
                             <span><a href="#">HOME</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar">
+                        <div class="col l2 m2 s2 nav-bar  orange">
                             <span><a href="#">JOB PORTAL</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar ">
+                        <div class="col l2 m2 s2 nav-bar  yellow ">
                             <span><a href="#">COURSE PORTAL</a></span>
                         </div>
-                        <div class="col l2 m2 s2 nav-bar">
+                        <div class="col l2 m2 s2 nav-bar  green">
                             <span><a href="#">CONTACT US</a></span>
                         </div>
-                        <form method="post">
-                            <div class="col l2 m2 s2 nav-bar nav-bar-login">
+                            <div class="col l2 m2 s2 nav-bar nav-bar-login  red">
                                 <?php
                                     if(isset($_SESSION['user_session']) && $_SESSION['roles'] == "ADMIN" ){
-                                       echo "<br><br>";
-                                       echo "<a href=dashboard.php class=white-text>GO TO DASHBOARD</a>";
+                                       echo "";
+                                       echo "<a href='dashboard.php' class='white-text' style='font-size:130%;line-height:5'>GO TO DASHBOARD</a>";
                                     }
                                     
                                     else if(isset($_SESSION['user_session'])  && $_SESSION['roles'] == "USER" ){
                                        echo "<br><br>";
-                                       echo "<a href=user_account.php class=white-text>MY ACCOUNT</a>"; 
+                                       echo "<a href='user_account.php' class='white-text' style='font-size:130%;line-height:5'>MY ACCOUNT</a>"; 
                                     }
                                     
                                     else{
-                                       echo "<span><a href=#login><i class='fa fa-lock fa-3x'></i></a></span>";
+                                        
+                                       echo "<br><span><a href='#login'><i class='fa fa-lock fa-3x'></i></a></span>";
                                     }
                                 ?>
                                 
                             </div>
-                        </form>
                     </div>
                     <!--<hr style="border:5px solid blue">--> 
                 </div>
@@ -140,9 +148,9 @@
                     <!--</div>-->
                 <!--</nav>-->
 
-                <div class="row home-main">
-                    <div class="col l12 m12 s12">
-                        <div class="col l9 m9 s9 home-content">
+                <div class="row ">
+                    <div class="col l12 m12 s12 home-main">
+                        <div class="col l9 m9 s9 home-content" style="margin:-1% 0 0 0">
                             <p>NS (Naukri Samachaar) is a portal for all the government job 
                                 seekers. This portal make the job easy for all the job hunters. 
                                 This portal will update all the hunters with new opening in 
@@ -200,10 +208,10 @@
                                     </div>
                                 </div>
                         </div>
-                        <div class="col l3 m3 s3">
-                            <p><img src="images/dominos.png" width="350" class="responsive-img"></p>
-                            <p><img src="images/dominos.png" width="350" class="responsive-img"></p>
-                            <!--<p><img src="images/dominos.png" width="350" class="responsive-img"></p>-->
+                        <div class="col l3 m3 s3" style="margin:-1% 0 0 0">
+                            <p><img src="images/instagram.jpg" width="280" height="180" class="card right"></p>
+                            <p ><img  src="images/amazon.png" width="280" height="180" class="card right"></p>
+                            <p><img src="images/slide_comet.jpg" width="280" height="180" class="card right"></p>
                         </div>
                     </div>
                 </div>
@@ -213,7 +221,7 @@
                     <div class="modal-content">
                        <div class="row">
                             <div class="" >
-                                <div class="col l12 m12 s12 center blue card">
+                                <div class="col l12 m12 s12 center red card">
                                     <h4 class="black-text  center white-text" style="font-family: carnas_light;margin:1.3% 0 0 0" >LOGIN </h4>
 
                                     <!--<img src="images/ns_login_logo_200.png" class=" ">-->
@@ -221,6 +229,7 @@
 
                                 <!--<hr style="border:5px solid black">-->
                                 <form method="post" name="Login_Form">
+                                    <br>
                                     <div class="input-field col l12 m12 s12">
                                         <input type="text" id="username" name="username">
                                         <label for="username"><i class="fa fa-user fa-2x"></i>&nbsp; Enter Your Username </label>
@@ -232,8 +241,12 @@
                                     </div>
 
                                     <div class="input-field col l12 m12 s12 center">
-                                        <button class="btn-flat" id="submit" name="btn-login">
+<!--                                        <button class="btn-flat" id="submit" name="btn-login">
                                             <a class="blue white-text btn"  id="login_submit">SUBMIT<i class="material-icons right">send</i></a>
+                                        </button>-->
+                                        
+                                        <button class="btn-flat red white-text" id="login_submit" name="btn-login">
+                                            SUBMIT<i class="material-icons right">send</i>
                                         </button>
                                     </div>
                                 </form>
@@ -253,6 +266,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
       <script src="js/jquery.film_roll.js"></script>
       <script src="js/main.js"></script>
-      <script src="js/login.js"></script>
+      <!--<script src="js/login.js"></script>-->
     </body>
 </html>
+
+

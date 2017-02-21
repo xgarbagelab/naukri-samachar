@@ -5,6 +5,7 @@
    if(!isset($_SESSION['user_session'])){
        header("location:DatabaseConnection/Logout.php");
    }
+   
 ?>
 <!doctype HTML>
 <html lang="en">
@@ -24,14 +25,21 @@
         
             <div class="container-fluid"   >
                 <div class="row" style="padding: 0 0 0 0; margin: -0.5% 0 0 0;">
-                    <div class="col l12 m12 s12 card blue">
-                        <div class='col l3 m3 a3'>
-                            <h4>WELCOME ADMIN</h4>
+                    <div class="col l12 m12 s12 card red white-text">
+                        <div class='col l5 m5 s5'>
+                            
+                            <h4>WELCOME <?php echo $_SESSION['user_name']; ?></h4>
                         </div>
                         
                         <div class=' right'>
-                            <button class="blue  btn"><a class="white-text" href="DatabaseConnection/Logout.php">LOGOUT</a></button>
-                            <img src="images/xfb_logo.png" width="50px" class=''>
+                                <a href="index.php" class="logout-home">
+                                    <i class="fa fa-home fa-3x" style="font-size:300%;color:white;text-decoration: none"></i>
+                                </a>
+                                 &nbsp;&nbsp;
+                                <a class="white-text logout-home" href="DatabaseConnection/Logout.php" style="font-weight: bold;font-family: carnas_regular;font-size:200%;">
+                                    LOGOUT
+                                </a>
+                            <!--<img src="images/xfb_logo.png" width="50px" class=''>-->
                         </div>
                         
                     </div>
@@ -39,7 +47,7 @@
                     <!--<div class="row" style="padding: -5% 0 0 0; margin: 0% 0 0 -1%"  >-->
                         <div class="col l12 m12 s12" style="padding: 0 0 0 0; margin: -0.5% 0 0 0%;">
                             <!-- 0. MENU for large device -->
-                            <div class="col l2 m2 s12 card hide-on-small-and-down    blue z-depth-2" style="border-radius:25px 10px 10px 25px;border-right: 5px dashed white;">
+                            <div class="col l2 m2 s12 card hide-on-small-and-down red z-depth-2" style=";border-right: 5px dashed white;">
                                 <div class="col l12 m12 s12 center" id="side-navbar">
                                     <p><a href="#" class="home">HOME</a></p><hr>
                                     <p><a href="#" class="job_entry">JOB ENTRY</a></p><hr>
@@ -191,14 +199,14 @@
 <!--                                            <button class="btn waves-effect waves-light" id="submit">Save
                                                 <i class="material-icons right">send</i>
                                             </button>-->
-                                            <a class="blue white-text btn"  id="submit">SAVE<i class="material-icons right">send</i></a>
+                                            <a class="red white-text btn"  id="submit">SAVE<i class="material-icons right">send</i></a>
                                         </div>
 
                                        <div class="col l4 m6 s12 ">
 <!--                                            <button class="btn waves-effect waves-light" id="save_submit">Save & Submit
                                                 <i class="material-icons right">send</i>
                                             </button>-->
-                                            <a class=" blue white-text btn "  id="save_submit">SAVE & SUBMIT<i class="material-icons right">send</i></a>
+                                            <a class=" red white-text btn "  id="save_submit">SAVE & SUBMIT<i class="material-icons right">send</i></a>
                                         </div>
                                     </div>
                             </div>
@@ -216,7 +224,7 @@
                     <!--</div>-->
                 </div>
             </div>
-            <footer class="site-footer blue" style="margin-bottom: -80px;height: 55px" >
+            <footer class="site-footer red" style="margin-bottom: -80px;height: 55px" >
                 <p class="center  white-text" style="padding:0% 0 0 0">All rights reserved &copy; 2016 xgarbagelab.com</p>
             </footer>
         </div>
