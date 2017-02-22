@@ -28,7 +28,6 @@ class USER
    
            $stmt = $this->db->prepare("INSERT INTO users(user_name,user_email,user_pass) 
                                                        VALUES(:uname, :umail, :upass)");
-              
            $stmt->bindparam(":uname", $uname);
            $stmt->bindparam(":umail", $umail);
            $stmt->bindparam(":upass", $new_password);            

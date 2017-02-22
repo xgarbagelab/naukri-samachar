@@ -24,7 +24,10 @@ class Connection extends DatabaseConfig {
     protected $passCode;
     
     function Connection() {
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        //session_start();
         $this ->connectionString = null;
         $dbPara = new DatabaseConfig();
         $this -> hostName = $dbPara -> serverName;

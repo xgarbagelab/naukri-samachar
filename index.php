@@ -14,11 +14,11 @@
     include_once './DatabaseConnection/User.php';
     $user = new USER($databaseConnection);
 
-   if($user->is_loggedin()!="")
-   {
-       $user_name = $_SESSION['user_name']. " - You are already Logged In";
-       echo "<script type='text/javascript'>alert('$user_name');</script>";
-   }
+//   if($user->is_loggedin()!="")
+//   {
+//       $user_name = $_SESSION['user_name']. " - You are already Logged In";
+//       echo "<script type='text/javascript'>alert('$user_name');</script>";
+//   }
     
 //     if(isset($_POST['login-btn']))
 //     {
