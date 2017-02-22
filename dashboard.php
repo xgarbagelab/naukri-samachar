@@ -21,7 +21,7 @@
     {
         echo "<script type='text/javascript'>alert(Hello);</script>";
         // username and password sent from form
-        $job_lable=$_POST['job_lable'];
+        $job_label=$_POST['job_label'];
         $job_department=$_POST['department_name'];
         $job_post=$_POST['post'];
         $job_state=$_POST['state'];
@@ -39,7 +39,7 @@
         
         echo "<script type='text/javascript'>alert('$job_last_date_of_fee_submission');</script>";
 
-        $status_post = $job->register($job_lable,$job_department,$job_post,$job_state,$job_vacancies,$job_age_limit,$job_educational_qualification,$job_pay_scale,$job_selection_process,$job_date_of_publish,$job_last_date_of_fee_submission,$job_last_date_of_online_submission,$job_online_link,$job_fees,$job_other);
+        $status_post = $job->register($job_label,$job_department,$job_post,$job_state,$job_vacancies,$job_age_limit,$job_educational_qualification,$job_pay_scale,$job_selection_process,$job_date_of_publish,$job_last_date_of_fee_submission,$job_last_date_of_online_submission,$job_online_link,$job_fees,$job_other);
         
         //echo "<script type='text/javascript'>alert('$status_post');</script>";
     }
@@ -143,7 +143,7 @@
                                 <?php include "dashboard_job_entry.php";?>
                             </div>                            
                             <!-- 2. JOB ENTRY-->
-                            <form method="post">
+<!--                            <form method="post">
                                 <div class="col l10 m10 s10 card" id="job_entry_main">
                                     <h1 class="center">JOB ENTRY</h1><hr>
                                     <div class="input-field col l4 m4 s6">
@@ -270,7 +270,7 @@
                                             </div>
                                         </div>
                                 </div>
-                            </form>
+                            </form>-->
 
                             
                             
