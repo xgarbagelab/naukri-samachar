@@ -35,7 +35,9 @@
         $job_last_date_of_online_submission=$_POST['last_date_of_online_submission'];
         $job_online_link=$_POST['online_link'];
         $job_fees=$_POST['fees'];
-        $job_other=$_POST['others
+        $job_other=$_POST['others'];
+        
+        echo "<script type='text/javascript'>alert('$job_last_date_of_fee_submission');</script>";
 
         $status_post = $job->register($job_lable,$job_department,$job_post,$job_state,$job_vacancies,$job_age_limit,$job_educational_qualification,$job_pay_scale,$job_selection_process,$job_date_of_publish,$job_last_date_of_fee_submission,$job_last_date_of_online_submission,$job_online_link,$job_fees,$job_other);
         
