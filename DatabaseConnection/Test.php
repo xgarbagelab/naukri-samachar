@@ -10,9 +10,6 @@ and open the template in the editor.
         <title>Test Login</title>
     </head>
     <body>
-        <?php
-            session_start();
-        ?>
         <div id ="header" style="width : 100%; background-color: #000000; color: #FFFFFF; text-align: center;">
             Test Login
         </div>
@@ -21,14 +18,14 @@ and open the template in the editor.
                 <input type ="text" id ="username" name="username"/>
                 <input type ="text" id ="password" name="password"/>
                 <input type="submit" value="Login"/>
-                <label>
-                    <?PHP 
-                        echo $_SESSION["status"];
-                        if($_SESSION["status"] == "Wrong Credentials") {
-                            session_abort();
-                        }
-                    ?>
-                </label>
+                <!--<label>
+                    //<?PHP 
+//                        echo $_SESSION["status"];
+//                        if($_SESSION["status"] == "Wrong Credentials") {
+//                            session_abort();
+//                        }
+//                    ?>
+                </label>-->
             </div>
         </form>
     </body>
