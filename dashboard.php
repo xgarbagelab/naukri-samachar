@@ -1,6 +1,6 @@
 <?php 
    session_start();
-   
+
    if(!isset($_SESSION['user_session'])){
        header("location:DatabaseConnection/Logout.php");
    }
@@ -35,9 +35,7 @@
         $job_last_date_of_online_submission=$_POST['last_date_of_online_submission'];
         $job_online_link=$_POST['online_link'];
         $job_fees=$_POST['fees'];
-        $job_other=$_POST['others'];
-        
-        echo "<script type='text/javascript'>alert('$job_last_date_of_fee_submission');</script>";
+        $job_other=$_POST['others
 
         $status_post = $job->register($job_lable,$job_department,$job_post,$job_state,$job_vacancies,$job_age_limit,$job_educational_qualification,$job_pay_scale,$job_selection_process,$job_date_of_publish,$job_last_date_of_fee_submission,$job_last_date_of_online_submission,$job_online_link,$job_fees,$job_other);
         
@@ -57,61 +55,91 @@
         <link rel="icon"       href="images/ns_logo_favicon.png">
     </head>   
     
-    <body >
-        <div class="page-wrap"> 
-        
-            <div class="container-fluid"   >
-                <div class="row" style="padding: 0 0 0 0; margin: -0.5% 0 0 0;">
-                    <div class="col l12 m12 s12 card blue">
-                        <div class='col l3 m3 a3'>
-                            <h4>WELCOME ADMIN</h4>
-                        </div>
-                        
-                        <div class=' right'>
-                            <button class="blue  btn"><a class="white-text" href="DatabaseConnection/Logout.php">LOGOUT</a></button>
-                            <img src="images/xfb_logo.png" width="50px" class=''>
-                        </div>
-                        
-                    </div>
-                    
-                    <!--<div class="row" style="padding: -5% 0 0 0; margin: 0% 0 0 -1%"  >-->
-                        <div class="col l12 m12 s12" style="padding: 0 0 0 0; margin: -0.5% 0 0 0%;">
-                            <!-- 0. MENU for large device -->
-                            <div class="col l2 m2 s12 card hide-on-small-and-down    blue z-depth-2" style="border-radius:25px 10px 10px 25px;border-right: 5px dashed white;">
-                                <div class="col l12 m12 s12 center" id="side-navbar">
-                                    <p><a href="#" class="home">HOME</a></p><hr>
-                                    <p><a href="#" class="job_entry">JOB ENTRY</a></p><hr>
-                                    <p><a href="#" class="job_list">JOB LIST</a></p><hr>
-                                    <p><a href="#" class="user_account">USER ACCOUNT</a></p><hr>
-                                    <p><a href="#">EMPTY</a></p><hr>
-                                    <p><a href="#">EMPTY</a></p><hr>
-                                    <p><a href="#">EMPTY</a></p><hr>
-                                    <p><a href="#">EMPTY</a></p><hr>
-                                    <p><a href="#">EMPTY</a></p>
-                                </div>
+    <body class="blue-grey darken-3" style="font-family:carnas_regular">
+        <!--<div class="page-wrap" >--> 
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col l12 m12 s12 blue-grey darken-3" ><!--style="margin:-1.2% 0 0 -2.2%;"-->
+                        <!left bar start here-->
+                        <div class="col l2 m2 s2">
+                            <div class="col l12 m12 s12 card"  >
+                                <h4 class="black-text center">DASHBOARD</h4>
+                                <img src="images/profile_pic.jpg" style="margin:0 0 0 25%" width="100"  class="center circle responsive-img">
+                                <p class="center"><?php echo $_SESSION['user_name']; ?></p>
                             </div>
-                            
-                            <!--navbar for small device -->
-                            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons left hide-on-med-and-up"></i></a>
-<!-- <select id="mobile-demo" class="no-clear black-text ">
-                                  <option class="black-text" value=""> Select State</option>
-                                  <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
- </select>-->
-                            <ul class="side-nav black-text " id="mobile-demo">
-                                <li><a href="#" class="home">HOME</a></li> 
-                                <li><a href="#" class="job_entry">JOB ENTRY</a></li>
-                                <li><a href="#" class="job_list">JOB LIST</a></li>
-                                <li><a href="#" class="user_account">USER ACCOUNT</a></li>
-                                <li></li>
-                                <li></li>
-                           </ul>
-                            
-                            <!-- 1. HOME -->
-                            <div class="col l10 m10 s10 " id="dashboard_home">
-                                <h1>HOME</h1>
+                            <div class="col l12 m12 s12 card "  >
+                                <p class=" white center card">
+                                    <i class="fa fa-home fa-2x"></i>&nbsp;&nbsp;
+                                    <a href="#" class="home black-text " style="font-size:20px">HOME</a>
+                                </p>
+                                <p class=" white center card">
+                                    <i class="fa fa-keyboard-o fa-2x"></i>&nbsp;&nbsp;
+                                    <a href="#" class="job_entry black-text" style="font-size:20px">JOB ENTRY</a>
+                                </p>
+                                <p class="white center card">
+                                    <i class="fa fa-list fa-2x"></i>&nbsp;&nbsp;
+                                    <a href="" class="black-text" style="font-size:20px">JOB LIST</a>
+                                </p>
+                                <p class="white center card">
+                                    <i class="fa fa-user-circle fa-2x"></i>&nbsp;&nbsp;
+                                    <a href="" class="black-text" style="font-size:20px">USER ACCOUNT</a>
+                                </p>
+                                
+                                <p class="white center card">
+                                    <i class=" "></i>&nbsp;&nbsp;
+                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
+                                </p>
+                                
+                                <p class="white center card">
+                                    <i class=" "></i>&nbsp;&nbsp;
+                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
+                                </p>
+                                
+                                <p class="white center card">
+                                    <i class=" "></i>&nbsp;&nbsp;
+                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
+                                </p>
+                                
+                                <p class="white center card">
+                                    <i class=" "></i>&nbsp;&nbsp;
+                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
+                                </p>
+                                
+                                 <p class="white center card">
+                                    <i class=""></i>&nbsp;&nbsp;
+                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
+                                </p>
+                                
+                                 <p class="white center card">
+                                    <i class=""></i>&nbsp;&nbsp;
+                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
+                                </p>
+                                
+                               
+                                   
+                               
                             </div>
-                            
+
+                        </div>
+                        <!left bar ends here-->
+                        <!right bar start here-->
+                        <div class="col l10 m10 s10 card black-text white  ">
+                            <div class="col l8 m8 s8 ">
+                                <h3 class="center ">WELCOME MR <?php echo $_SESSION['user_name']; ?></h3>
+                            </div>
+                            <div class="col l4 m4 s4 ">
+                                <br>
+                                <a href="DatabaseConnection/Logout.php"><i class="fa fa-power-off right fa-3x black-text"></i></a>
+                            </div>
+                        </div>   
+                        
+                        <div class="col l10 m10 s10">
+                           <div class="row white " id="dashboard_home">
+                                <?php include "dashboard_home.php";?>
+                           </div> 
+                            <div class="row " id="job_entry_main">
+                                <?php include "dashboard_job_entry.php";?>
+                            </div>                            
                             <!-- 2. JOB ENTRY-->
                             <form method="post">
                                 <div class="col l10 m10 s10 card" id="job_entry_main">
@@ -241,33 +269,31 @@
                                         </div>
                                 </div>
                             </form>
+
                             
-                            <!-- 3. JOB LIST -->
-                            <div class="col l10 m10 s10 " id="job_list_main">
-                                <h1>JOB LIST</h1>
-                            </div>
                             
-                            <!--4. USER ACCOUNT -->
-                            <div class="col l10 m10 s10 " id="user_account_main">
-                                <h1>USER ACCOUNT</h1>
-                            </div>
                         </div>
-                    <!--</div>-->
+                        
+                            
+                           
+                        </div>
+                        <!right bar ends here-->
+                    </div>
+                      <!--<p class="center  white-text" style="">All rights reserved &copy; 2016 xgarbagelab.com</p>-->
                 </div>
+                 
             </div>
-            <footer class="site-footer blue" style="margin-bottom: -80px;height: 55px" >
-                <p class="center  white-text" style="padding:0% 0 0 0">All rights reserved &copy; 2016 xgarbagelab.com</p>
-            </footer>
-        </div>
+        <!--</div>-->
+   
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
       <script src="js/jquery.film_roll.js"></script>
       <script src="js/main.js"></script>
       <script src="js/login.js"></script>
 <!--      <script src="js/job_submit.js"></script>-->
       <script src="js/dashboard.js"></script>
-      
       <script>
           //select
         $(document).ready(function() {
