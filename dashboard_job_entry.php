@@ -1,7 +1,9 @@
 
 
                             <div class="col l12 m12 s12 card " style="margin:-0.5% 0 0 0 ">
-                                <h4 class="">JOB ENTRY</h4><hr>
+                                <br>
+                                <!--<h4 class="">JOB ENTRY</h4>--><p class="btn-floating tooltipped  left orange" data-position="right" data-delay="50" data-tooltip="Job Entry"> <i class=" fa fa-keyboard-o"></i></p>
+                                <br><br><br><hr>
                                 <div class="input-field col l4 m4 s6">
                                     <input type="text"  id="job_label" class="clear validate">
                                     <label for="job_label">Job Label</label>
@@ -125,5 +127,5 @@
                                             <a class=" red white-text btn "  id="save_submit">SAVE & SUBMIT<i class="material-icons right">send</i></a>
                                         </div>
                                     </div>
-                                <br><br>
+                                <br>
                             </div>
