@@ -34,7 +34,7 @@
     </div>
     </div>
     <div class="col l12 m12 s12 center">
-        <a class="btn red white-text "  id="submit">SUBMIT<i class="material-icons right">send</i></a>
+        <a class="btn red white-text "  id="submit">UPDATE<i class="material-icons right">send</i></a>
         <br><br>
     </div>
     
