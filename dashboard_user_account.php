@@ -19,7 +19,7 @@
     
     <div class="input-field col l12 m12 s12">
         <input type="text"  id="cpassword" class="">
-        <label for="cassword" class="black-text">Your Confirm Password</label>
+        <label for="cpassword" class="black-text">Your Confirm Password</label>
     </div>
     
     <div class="input-field col l12 m12 s12">
