@@ -25,7 +25,7 @@
     <div class="input-field col l12 m12 s12">
          <div class="file-field input-field">
       <div class="btn white black-text">
-        <span>File</span>
+        <span>Upload Photo</span>
         <input type="file">
       </div>
       <div class="">
