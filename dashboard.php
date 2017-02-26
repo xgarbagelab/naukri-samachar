@@ -1,21 +1,10 @@
 <?php 
-   session_start();
-
-   if(!isset($_SESSION['user_session'])){
-       header("location:DatabaseConnection/Logout.php");
-   }
+    session_start();
+   $_SESSION['user_session'];
    
-?>
-<?php
-
-/**
- * Login Script
- *
- * @author Shivam Srivastava <xshivam@xgarbagelab.com>
- * 
- */
-    include_once './DatabaseConnection/Job.php';
-    $job = new Job();
+//   if(!isset($_SESSION['user_session'])){
+//       header("location:DatabaseConnection/Logout.php");
+//   }
    
     if(isset($_POST['submit']))
     {
@@ -54,90 +43,114 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" >
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/font.css">
+        
         <link rel="icon"       href="images/ns_logo_favicon.png">
+        <style>
+/*            .fixed-action-btn{
+                position:relative;
+              margin:0 0 0 0 !important;  
+            }*/
+        </style>
     </head>   
     
     <body class="blue-grey darken-3" style="font-family:carnas_regular">
         <!--<div class="page-wrap" >--> 
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col l12 m12 s12 blue-grey darken-3" ><!--style="margin:-1.2% 0 0 -2.2%;"-->
-                        <!left bar start here-->
-                        <div class="col l2 m2 s2">
-                            <div class="col l12 m12 s12 card"  >
-                                <h4 class="black-text center">DASHBOARD</h4>
-                                <img src="images/profile_pic.jpg" style="margin:0 0 0 25%" width="100"  class="center circle responsive-img">
-                                <p class="center"><?php echo $_SESSION['user_name']; ?></p>
-                            </div>
-                            <div class="col l12 m12 s12 card "  >
-                                <p class=" white center card">
-                                    <i class="fa fa-home fa-2x"></i>&nbsp;&nbsp;
-                                    <a href="#" class="home black-text " style="font-size:20px">HOME</a>
-                                </p>
-                                <p class=" white center card">
-                                    <i class="fa fa-keyboard-o fa-2x"></i>&nbsp;&nbsp;
-                                    <a href="#" class="job_entry black-text" style="font-size:20px">JOB ENTRY</a>
-                                </p>
-                                <p class="white center card">
-                                    <i class="fa fa-list fa-2x"></i>&nbsp;&nbsp;
-                                    <a href="" class="black-text" style="font-size:20px">JOB LIST</a>
-                                </p>
-                                <p class="white center card">
-                                    <i class="fa fa-user-circle fa-2x"></i>&nbsp;&nbsp;
-                                    <a href="" class="black-text" style="font-size:20px">USER ACCOUNT</a>
-                                </p>
-                                
-                                <p class="white center card">
-                                    <i class=" "></i>&nbsp;&nbsp;
-                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
-                                </p>
-                                
-                                <p class="white center card">
-                                    <i class=" "></i>&nbsp;&nbsp;
-                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
-                                </p>
-                                
-                                <p class="white center card">
-                                    <i class=" "></i>&nbsp;&nbsp;
-                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
-                                </p>
-                                
-                                <p class="white center card">
-                                    <i class=" "></i>&nbsp;&nbsp;
-                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
-                                </p>
-                                
-                                 <p class="white center card">
-                                    <i class=""></i>&nbsp;&nbsp;
-                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
-                                </p>
-                                
-                                 <p class="white center card">
-                                    <i class=""></i>&nbsp;&nbsp;
-                                    <a href="" class="black-text" style="font-size:20px">EMPTY</a>
-                                </p>
-                                
-                               
-                                   
-                               
-                            </div>
-
+                    <!--dashboard header starts here -->
+                    <div class="col l12 m12 s12 card" style="margin:0 0 0 0;position:fixed;z-index: 1000" >
+                        <div class="col l2 m2 s2" style="margin:1% 0 0 0">
+                            <!--<a class="home black-text btn-floating blue"><i class="fa fa-home"></i></a>-->
+                            <img src="images/profile_pic.jpg"  class=" center btn-floating" width="50" style="margin: 0 0 0 30%">
+                            <br>
+                            <span style="margin:2% 0 0 0;line-height:3" >Welcome <?php echo $_SESSION['user_name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;</span>
                         </div>
-                        <!left bar ends here-->
-                        <!right bar start here-->
-                        <div class="col l10 m10 s10 card black-text white  ">
-                            <div class="col l8 m8 s8 ">
-                                <h3 class="center ">WELCOME MR <?php echo $_SESSION['user_name']; ?></h3>
+                        <div class="col l7 m7 s7">
+                            <h2 class="center">DASHBOARD</h2>
+                        </div>
+                        <div class="col l13 m3 s3 right">
+                            <br>
+                            <div class="fixed-action-btn horizontal  right" style="position:relative;margin:8% 0 0 0;z-index: 10000"> <!-- add class right and css position relative -->
+                                <a class="btn-floating btn-large blue-grey darken-3 dashboard-navbar"> <i class="material-icons">menu</i></a>
+                                <ul>
+                                    <li><a class="home btn-floating tooltipped blue" data-position="bottom" data-delay="50" data-tooltip="Home">
+                                        <i class="fa fa-home"></i>
+                                    </a></li>
+                                    <li><a class="job_entry btn-floating tooltipped orange" data-position="bottom" data-delay="50" data-tooltip="Job Entry">
+                                        <i class="fa fa-keyboard-o"></i>
+                                    </a></li>
+
+                                    <li><a class="job_list btn-floating tooltipped yellow darken-1" data-position="bottom" data-delay="50" data-tooltip="Job List">
+                                        <i class="fa fa-list"></i>
+                                    </a></li>
+
+                                    <li><a class="user_account btn-floating tooltipped green" data-position="bottom" data-delay="50" data-tooltip="User Account">
+                                        <i class="fa fa-user"></i>
+                                    </a></li>
+
+                                    <li><a href="DatabaseConnection/Logout.php" class="btn-floating tooltipped red" data-position="bottom" data-delay="50" data-tooltip="Log Out">
+                                        <i class="fa fa-power-off"></i>
+                                    </a></li>
+                                </ul>
                             </div>
-                            <div class="col l4 m4 s4 ">
-                                <br>
-                                <a href="DatabaseConnection/Logout.php"><i class="fa fa-power-off right fa-3x black-text"></i></a>
-                            </div>
-                        </div>   
-                        
-                        <div class="col l10 m10 s10">
-                           <div class="row white " id="dashboard_home">
+                            <!--dashboard-navbar ends here-->
+                           
+                         
+                        </div>
+                    </div>
+                     <!--dashboard header ends here -->
+                         
+                    <!--main section - page included-->
+                    <div class="col l12 m12 s12 " style="margin: 7% 0 0 0">
+                        <div class="row card   " id="dashboard_home">
                                 <?php include "dashboard_home.php";?>
+                        </div> 
+                        
+                        <div class="row " id="job_entry_main">
+                            <?php include "dashboard_job_entry.php";?>
+                        </div>
+                        
+                        <div class="row" id="job_list_main">
+                            <?php include "dashboard_job_list.php"; ?>
+                        </div>
+                        
+                        <div class="row" id="user_account_main">
+                            <?php include "dashboard_user_account.php"; ?>
+                            
+                        </div>
+                        <br>
+                        <!--<p class="center white-text">All rights reserved &copy; 2016 xgarbagelab.com</p>-->
+                    </div>
+                    <!--main section - page included-->
+                </div>
+            </div>
+        
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <script src="js/dashboard.js"></script>
+      <script>
+          //select
+        $(function() {
+            $('select').material_select();
+            $('.date').pickadate();
+            
+          });
+        </script>
+        <script>
+    $(function(){
+        /* pagination */
+    $.fn.pageMe = function(opts){
+        var $this = this,
+            defaults = {
+                perPage: 7,
+                showPrevNext: false,
+                numbersPerPage: 1,
+                hidePageNumbers: false
+            },
+            settings = $.extend(defaults, opts);
+
                            </div> 
                             <div class="row " id="job_entry_main">
                                 <?php include "dashboard_job_entry.php";?>
@@ -155,113 +168,78 @@
                                         <label for="department_name">Department Name</label>
                                     </div>
 
-                                    <div class="input-field col l4 m4 s6">
-                                        <input type="text" id="post" class="clear validate" name="post">
-                                        <label for="post">Post</label>
-                                    </div>
 
-                                    <div class="input-field col l4 m4 s6">
-                                    <select id="state" class="no-clear black-text " name="state">
-                                      <option class="black-text" value="" disabled selected> Select State</option>
-                                      <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                      <option value="Assam">Assam</option>
-                                      <option value="Bihar">Bihar</option>
-                                      <option value="Chhattisgarh">Chhattisgarh</option>
-                                      <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                                      <option value="Daman and Diu">Daman and Diu</option>
-                                      <option value="Delhi">Delhi</option>
-                                      <option value="Goa">Goa</option>
-                                      <option value="Gujarat">Gujarat</option>
-                                      <option value="Haryana">Haryana</option>
-                                      <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                      <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                      <option value="Jharkhand">Jharkhand</option>
-                                      <option value="Karnataka">Karnataka</option>
-                                      <option value="Kerala">Kerala</option>
-                                      <option value="Madhya Pradesh">Madhya Pradesh/option>
-                                      <option value="Maharashtra">Maharashtra</option>
-                                      <option value="Manipur">Manipur</option>
-                                      <option value="Meghalaya">Meghalaya</option>
-                                      <option value="Mizoram">Mizoram</option>
-                                      <option value="Nagaland">Nagaland</option>
-                                      <option value="Orissa">Orissa</option>
-                                      <option value="Puducherry">Puducherry</option>
-                                      <option value="Punjab">Punjab</option>
-                                      <option value="Rajasthan">Rajasthan</option>
-                                      <option value="Sikkim">Sikkim</option>
-                                      <option value="Tamil Nadu">Tamil Nadu</option>
-                                      <option value="Telangana">Telangana</option>
-                                      <option value="Tripura">Tripura</option>
-                                      <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                      <option value="Uttarakhand">Uttarakhand</option>
-                                      <option value="West Bengal">West Bengal</option>
-                                    </select>
-                                </div>
+        var listElement = $this;
+        var perPage = settings.perPage; 
+        var children = listElement.children();
+        var pager = $('.pagination');
 
-                                    <div class="input-field col l4 m4 s6">
-                                      <input type="text"  id="number_of_vacancies" class="no-clear validate" name="number_of_vacancies">
-                                      <label for="number_of_vacancies">Number of Vacancies</label>
-                                    </div>
+        if (typeof settings.childSelector!="undefined") {
+            children = listElement.find(settings.childSelector);
+        }
 
-                                    <div class="input-field col l4 m4 s6">
-                                      <input type="text" id="age_limit" class="clear validate" name="age_limit">
-                                      <label for="age_limit">Age Limit</label>
-                                    </div>
+        if (typeof settings.pagerSelector!="undefined") {
+            pager = $(settings.pagerSelector);
+        }
 
-                                    <div class="input-field col l4 m4 s6">
-                                      <input type="text" id="education_qualification" class="clear validate" name="education_qualification">
-                                      <label for="education_qualification">Education Qualification</label>
-                                    </div>
+        var numItems = children.size();
+        var numPages = Math.ceil(numItems/perPage);
 
-                                     <div class="input-field col l4 m4 s6">
-                                      <input type="text" id="pay_scale" class="clear validate" name="pay_scale">
-                                      <label for="pay_scale">Pay Scale</label>
-                                    </div>
+        pager.data("curr",0);
 
-                                    <div class="input-field col l4 m4 s6">
-                                      <input type="text" id="selection_process" class="clear validate" name="selection_process">
-                                      <label for="selection_process">Selection Process</label>
-                                    </div>
+        if (settings.showPrevNext){
+            $('<li><a href="#" class="prev_link">&lsaquo;</a></li>').appendTo(pager);
+        }
 
-                                    <div class="col l4 m4 s6">
-                                      <label for="date_of_publish" class="date">Date of Publish</label>
-                                      <input type="text"  placeholder="Select" id="date_of_publish" class="clear input-field date" name="date_of_publish">
-                                    </div>
+        var curr = 0;
+        while(numPages > curr && (settings.hidePageNumbers==false)){
+            $('<li><a href="#" class="page_link">'+(curr+1)+'</a></li>').appendTo(pager);
+            curr++;
+        }
 
-                                    <div class="col l4 m4 s6">
-                                      <label for="last_date_of_fees_submission" class="date">Last Date of Fees Submission</label>
-                                      <input type="text" placeholder="Select Date" id="last_date_of_fees_submission"  class="clear date" name="last_date_of_fees_submission">
-                                    </div>
+        if (settings.numbersPerPage>1) {
+           $('.page_link').hide();
+           $('.page_link').slice(pager.data("curr"), settings.numbersPerPage).show();
+        }
 
-                                    <div class="col l4 m4 s6">
-                                      <label for="last_date_of_online_submission" class="date">Last Date of Online Submission</label>
-                                      <input type="text" placeholder="Select Date"  id="last_date_of_online_submission" class="clear date" name="last_date_of_online_submission">
-                                    </div>
+        if (settings.showPrevNext){
+            $('<li><a href="#" class="next_link">&rsaquo;</a></li>').appendTo(pager);
+        }
 
-                                    <div class="input-field col l4 m4 s6">
-                                      <input type="text" id="online_link" class="clear validate" name="online_link">
-                                      <label for="online_link">Online Link</label>
-                                    </div>
 
-                                    <div class="input-field col l4 m4 s6">
-                                      <input type="text" id="fees" class="clear validate" name="fees">
-                                      <label for="Fees">Fees</label>
-                                    </div>
+        pager.find('.page_link:first').addClass('active');
+        if (numPages<=1) {
+            pager.find('.next_link').hide();
+        }
+            pager.children().eq(1).addClass("active");
 
-                                    <div class="input-field col l4 m12 s12">
-                                      <input type="text" id="others" class="clear validate" name="others">
-                                      <label for="Others">Others</label>
-                                    </div>
+        children.hide();
+        children.slice(0, perPage).show();
 
-                                    <div class="row">
-                                            <div class="col l2 m4 s12 offset-l4  ">
-                                                <button class="btn waves-effect waves-light" id="submit" name="submit">Save
-                                                    <i class="material-icons right">send</i>
-                                                </button>
-<!--                                                <a class="blue white-text btn"  id="submit" name="submit">SAVE<i class="material-icons right">send</i></a>-->
-                                            </div>
+        pager.find('li .page_link').click(function(){
+            var clickedPage = $(this).html().valueOf()-1;
+            goTo(clickedPage,perPage);
+            return false;
+        });
+        pager.find('li .prev_link').click(function(){
+            previous();
+            return false;
+        });
+        pager.find('li .next_link').click(function(){
+            next();
+            return false;
+        });
 
+        function previous(){
+            var goToPage = parseInt(pager.data("curr")) - 1;
+            goTo(goToPage);
+        }
+
+
+        function next(){
+            goToPage = parseInt(pager.data("curr")) + 1;
+            goTo(goToPage);
+        }
                                            <div class="col l4 m6 s12 ">
     <!--                                            <button class="btn waves-effect waves-light" id="save_submit">Save & Submit
                                                     <i class="material-icons right">send</i>
@@ -272,37 +250,67 @@
                                 </div>
                             </form>-->
 
-                            
-                            
-                        </div>
-                        
-                            
-                           
-                        </div>
-                        <!right bar ends here-->
-                    </div>
-                      <!--<p class="center  white-text" style="">All rights reserved &copy; 2016 xgarbagelab.com</p>-->
-                </div>
-                 
-            </div>
-        <!--</div>-->
-   
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
-      <script src="js/jquery.film_roll.js"></script>
-      <script src="js/main.js"></script>
-      <script src="js/login.js"></script>
-<!--      <script src="js/job_submit.js"></script>-->
-      <script src="js/dashboard.js"></script>
-      <script>
-          //select
-        $(document).ready(function() {
-            $('select').material_select();
-            $('.date').pickadate({format: 'dd-mm-yyyy'});
-           
-          });
-        </script>
+        function goTo(page){
+            var startAt = page * perPage,
+                endOn = startAt + perPage;
+
+            children.css('display','none').slice(startAt, endOn).show();
+
+            if (page>=1) {
+                pager.find('.prev_link').show();
+            }
+            else {
+                pager.find('.prev_link').hide();
+            }
+
+            if (page<(numPages-1)) {
+                pager.find('.next_link').show();
+            }
+            else {
+                pager.find('.next_link').hide();
+            }
+
+            pager.data("curr",page);
+
+            if (settings.numbersPerPage>1) {
+                    $('.page_link').hide();
+                    $('.page_link').slice(page, settings.numbersPerPage+page).show();
+            }
+
+            pager.children().removeClass("active");
+            pager.children().eq(page+1).addClass("active");  
+        }
+    };
+
+    $('#pages').pageMe({pagerSelector:'#myPager',childSelector:'.page',showPrevNext:true,hidePageNumbers:false,perPage:1});
+
+        });
+</script>
+
+<script>
+    $(function(){
+//        $('.checkbox_action').click(function(){
+//           $('#modfiy_action_button').slideToggle(1000);
+//        });
+
+$("input:checkbox").on('click', function() {
+//     $('#modfiy_action_button').slideDown(1000);
+  // in the handler, 'this' refers to the box clicked on
+  var $box = $(this);
+  if ($box.is(":checked")) {
+    // the name of the box is retrieved using the .attr() method
+    // as it is assumed and expected to be immutable
+    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+    // the checked state of the group/box on the other hand will change
+    // and the current value is retrieved using .prop() method
+    $(group).prop("checked", false);
+    $box.prop("checked", true);
+  } else {
+    $box.prop("checked", false);
+  }
+});
+    });
+</script>
     </body>
 </html>
