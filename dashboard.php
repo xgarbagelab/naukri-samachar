@@ -6,6 +6,32 @@
 //       header("location:DatabaseConnection/Logout.php");
 //   }
    
+    if(isset($_POST['submit']))
+    {
+        echo "<script type='text/javascript'>alert(Hello);</script>";
+        // username and password sent from form
+        $job_label=$_POST['job_label'];
+        $job_department=$_POST['department_name'];
+        $job_post=$_POST['post'];
+        $job_state=$_POST['state'];
+        $job_vacancies=$_POST['number_of_vacancies'];
+        $job_age_limit=$_POST['age_limit'];
+        $job_educational_qualification=$_POST['education_qualification'];
+        $job_pay_scale=$_POST['pay_scale'];
+        $job_selection_process=$_POST['selection_process'];
+        $job_date_of_publish=$_POST['date_of_publish'];
+        $job_last_date_of_fee_submission=$_POST['last_date_of_fees_submission'];
+        $job_last_date_of_online_submission=$_POST['last_date_of_online_submission'];
+        $job_online_link=$_POST['online_link'];
+        $job_fees=$_POST['fees'];
+        $job_other=$_POST['others'];
+        
+        echo "<script type='text/javascript'>alert('$job_last_date_of_fee_submission');</script>";
+
+        $status_post = $job->register($job_label,$job_department,$job_post,$job_state,$job_vacancies,$job_age_limit,$job_educational_qualification,$job_pay_scale,$job_selection_process,$job_date_of_publish,$job_last_date_of_fee_submission,$job_last_date_of_online_submission,$job_online_link,$job_fees,$job_other);
+        
+        //echo "<script type='text/javascript'>alert('$status_post');</script>";
+    }
 ?>
 <!doctype HTML>
 <html lang="en">
@@ -125,6 +151,24 @@
             },
             settings = $.extend(defaults, opts);
 
+                           </div> 
+                            <div class="row " id="job_entry_main">
+                                <?php include "dashboard_job_entry.php";?>
+                            </div>                            
+                            <!-- 2. JOB ENTRY-->
+<!--                            <form method="post">
+                                <div class="col l10 m10 s10 card" id="job_entry_main">
+                                    <h1 class="center">JOB ENTRY</h1><hr>
+                                    <div class="input-field col l4 m4 s6">
+                                        <input type="text"  id="job_label" class="clear validate" name ="job_lable">
+                                        <label for="job_label">Job Label</label>
+                                    </div>
+                                    <div class="input-field col l4 m4 s6">
+                                        <input type="text"  id="department_name" class="clear validate" name="department_name">
+                                        <label for="department_name">Department Name</label>
+                                    </div>
+
+
         var listElement = $this;
         var perPage = settings.perPage; 
         var children = listElement.children();
@@ -191,10 +235,21 @@
             goTo(goToPage);
         }
 
+
         function next(){
             goToPage = parseInt(pager.data("curr")) + 1;
             goTo(goToPage);
         }
+                                           <div class="col l4 m6 s12 ">
+    <!--                                            <button class="btn waves-effect waves-light" id="save_submit">Save & Submit
+                                                    <i class="material-icons right">send</i>
+                                                </button>-->
+                                                <a class=" blue white-text btn "  id="save_submit" name="save_submit">SAVE & SUBMIT<i class="material-icons right">send</i></a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </form>-->
+
 
         function goTo(page){
             var startAt = page * perPage,
